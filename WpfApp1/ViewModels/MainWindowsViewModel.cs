@@ -30,11 +30,10 @@ namespace WpfApp1.ViewModels
 
         private Unite? _SelectedUnites;
 
-        private DelegateCommand<object> _CommandAddUnite;
+        private DelegateCommand<object> _CommandUpdateUnite;
 
         private DelegateCommand<object> _CommandRemoveUnite;
 
-        private DelegateCommand<object> _CommandUpdateUnite;
 
         private ObservableCollection<TypeUnite> _TypeUnites;
 
@@ -97,14 +96,13 @@ namespace WpfApp1.ViewModels
         public DelegateCommand<object> CommandUpdateBaie { get => _CommandUpdateBaie; set => _CommandUpdateBaie = value; }
         public ObservableCollection<User> Users { get => _Users; set => _Users = value; }
         public User? SelectedUser { get => _SelectedUser; set => _SelectedUser = value; }
-        public DelegateCommand<object> CommandAddUnite { get => _CommandAddUnite; set => _CommandAddUnite = value; }
-        public DelegateCommand<object> CommandRemoveUnite { get => _CommandRemoveUnite; set => _CommandRemoveUnite = value; }
         public DelegateCommand<object> CommandUpdateUnite { get => _CommandUpdateUnite; set => _CommandUpdateUnite = value; }
         public DelegateCommand<object> CommandAddReservation { get => _CommandAddReservation; set => _CommandAddReservation = value; }
         public DelegateCommand<object> CommandRemoveReservation { get => _CommandRemoveReservation; set => _CommandRemoveReservation = value; }
         public DelegateCommand<object> CommandUpdateReservation { get => _CommandUpdateReservation; set => _CommandUpdateReservation = value; }
         public ObservableCollection<TypeUnite> TypeUnites { get => _TypeUnites; set => _TypeUnites = value; }
         public DelegateCommand<object> SelectedTypeUnite { get => _SelectedTypeUnite; set => _SelectedTypeUnite = value; }
+        public DelegateCommand<object> CommandRemoveUnite { get => _CommandRemoveUnite; set => _CommandRemoveUnite = value; }
 
         #endregion
 
@@ -115,7 +113,7 @@ namespace WpfApp1.ViewModels
             CommandAddBaie = new DelegateCommand<object>(AddBaie, CanAddBaie).ObservesProperty(() => this.SelectedBaies);
             CommandRemoveBaie = new DelegateCommand<object>(RemoveBaie, CanRemoveBaie).ObservesProperty(() => this.SelectedBaies);
             CommandUpdateBaie = new DelegateCommand<object>(RemoveBaie, CanRemoveBaie).ObservesProperty(() => this.SelectedBaies);
-
+            CommandRemoveUnite = new DelegateCommand<object>(RemoveBaie, CanRemoveUnite).ObservesProperty(() => this.SelectedUnites);
 
             using (PpeContext context = new()) {
                 this.Baies = new ObservableCollection<Baie>(context.Baies);
@@ -130,7 +128,7 @@ namespace WpfApp1.ViewModels
 
         #region Methods
 
-        internal void AddBaie(object ?parameter = null)
+        internal void AddBaie(object? parameter = null)
         {
             using (PpeContext context = new())
             {
@@ -140,10 +138,23 @@ namespace WpfApp1.ViewModels
                 context.Baies.Add(Baies);
                 this._Baies.Add(Baies);
                 context.SaveChanges();
+
+                for (int i = 0; i < 42; i++)
+                {
+                    Unite Unites = new Unite();
+                    Unites.IdentifiantBaieId = Baies.Id;
+                    Unites.IdentifiantTypeUniteId = 1;
+                    Unites.Status = false;
+                    Unites.Numero = "111";
+                    context.Unites.Add(Unites);
+                    this.Unites.Add(Unites);
+
+                }
+                context.SaveChanges();
             }
         }
 
-        internal bool CanAddBaie(object ?parameter = null) => this.SelectedBaies != null;
+        internal bool CanAddBaie(object ?parameter = null) => this.SelectedBaies != null || this.SelectedUnites != null;
 
 
         internal void RemoveBaie(object? parameter = null)
@@ -154,17 +165,26 @@ namespace WpfApp1.ViewModels
                 context.Baies.Remove(Baies);
                 this._Baies.Remove(Baies);
                 context.SaveChanges();
+                for (int i = 0; i < Baies.NbrEmplacement; i++)
+                {
+                    Unite Unites = SelectedUnites;
+                    if (Baies.Id == Unites.IdentifiantBaieId)
+                    {
+                        context.Unites.Remove(Unites);
+                        this.Unites.Remove(Unites);
+                    }
+                }
+                context.SaveChanges();
             }
         }
 
-        internal bool CanRemoveBaie(object? parameter = null) => this.SelectedBaies != null;
+        internal bool CanRemoveBaie(object? parameter = null) => this.SelectedBaies != null || this.SelectedUnites != null;
 
 
         internal void UpdateBaie(object? parameter = null)
         {
             using (PpeContext context = new())
             {
-
                 context.Baies.Find(SelectedBaies.Id).NbrEmplacement = SelectedBaies.NbrEmplacement;
                 context.Baies.Find(SelectedBaies.Id).Status = SelectedBaies.Status;
                 context.SaveChanges();
@@ -174,24 +194,34 @@ namespace WpfApp1.ViewModels
         internal bool CanUpdateBaie(object? parameter = null) => this.SelectedBaies != null;
 
 
-
-        internal void AddUnite(object? parameter = null)
+        internal void RemoveUnite(object? parameter = null)
         {
             using (PpeContext context = new())
             {
-                Unite Unites = new Unite();
-                
-                Unites.IdentifiantBaieId = 1 ;
-                Unites.IdentifiantTypeUniteId = 1;
-                Unites.Status = false;
-                Unites.Numero = "111";
-                context.Unites.Add(Unites);
-                this.Unites.Add(Unites);
+                Unite? Unite = SelectedUnites;
+                context.Unites.Remove(Unite);
+                this._Unites.Remove(Unite);
                 context.SaveChanges();
             }
         }
 
-        internal bool CanAddUnite(object? parameter = null) => this.SelectedBaies != null;
+        internal bool CanRemoveUnite(object? parameter = null) => this.SelectedUnites != null;
+
+
+        internal void UpdateUnite(object? parameter = null)
+        {
+            using (PpeContext context = new())
+            {
+                context.Unites.Find(SelectedUnites.Id).IdentifiantTypeUniteId = SelectedUnites.IdentifiantTypeUniteId;
+                context.Unites.Find(SelectedUnites.Id).IdentifiantReservationId = SelectedUnites.IdentifiantReservationId;
+                context.Unites.Find(SelectedUnites.Id).IdentifiantBaieId = SelectedUnites.IdentifiantBaieId;
+                context.Unites.Find(SelectedUnites.Id).Status = SelectedUnites.Status;
+                context.SaveChanges();
+            }
+        }
+
+        internal bool CanUpdateUnite(object? parameter = null) => this.SelectedUnites != null;
+
         #endregion
 
     }
