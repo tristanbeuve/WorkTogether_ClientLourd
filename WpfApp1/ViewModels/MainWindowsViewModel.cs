@@ -18,6 +18,13 @@ namespace WpfApp1.ViewModels
 
         private Baie? _SelectedBaies;
 
+        private ObservableCollection<Unite> _Unites;
+
+        private Unite? _SelectedUnites;
+
+        private ObservableCollection<Reservation> _Reservation;
+
+        private Reservation? _SelectedReservation;
 
         #endregion
 
@@ -33,6 +40,27 @@ namespace WpfApp1.ViewModels
             get => _SelectedBaies; 
             set => _SelectedBaies = value; 
         }
+
+        public ObservableCollection<Unite> Unites
+        {
+            get =>_Unites;
+            set => _Unites = value;
+        }
+
+        public Unite? SelectedUnites {
+            get => _SelectedUnites; 
+            set => _SelectedUnites = value; 
+        }
+        public ObservableCollection<Reservation> Reservation 
+        { 
+            get => _Reservation; 
+            set => _Reservation = value; 
+        }
+        public Reservation? SelectedReservation 
+        {
+            get => _SelectedReservation; 
+            set => _SelectedReservation = value; 
+        }
         #endregion
 
         #region Constructor
@@ -41,6 +69,8 @@ namespace WpfApp1.ViewModels
         {
             using (PpeContext context = new()) {
                 this.Baies = new ObservableCollection<Baie>(context.Baies);
+                this.Unites = new ObservableCollection<Unite>(context.Unites);
+                this.Reservation = new ObservableCollection<Reservation>(context.Reservations);
             }
         }
 

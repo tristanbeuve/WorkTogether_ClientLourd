@@ -26,5 +26,20 @@ namespace WpfApp1.View
             InitializeComponent();
             this.DataContext = new MainWindowsViewModel();
         }
+
+        private void Ajouter_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Supprimer_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Modifier_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

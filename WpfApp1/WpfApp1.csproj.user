@@ -13,6 +13,12 @@
     <Compile Update="View\Home.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\Reservation.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Unite.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Windows\WindowLogin.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -28,6 +34,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\Home.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Reservation.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Unite.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Windows\WindowLogin.xaml">

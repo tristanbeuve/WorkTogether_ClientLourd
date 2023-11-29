@@ -71,3 +71,7 @@ C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\Wpf
 C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WpfApp1\obj\Debug\net8.0-windows\WpfApp1.sourcelink.json
 C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WpfApp1\obj\Debug\net8.0-windows\View\Home.g.cs
 C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WpfApp1\obj\Debug\net8.0-windows\View\Home.baml
+C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WpfApp1\obj\Debug\net8.0-windows\View\Unite.g.cs
+C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WpfApp1\obj\Debug\net8.0-windows\View\Unite.baml
+C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WpfApp1\obj\Debug\net8.0-windows\View\Reservation.g.cs
+C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WpfApp1\obj\Debug\net8.0-windows\View\Reservation.baml

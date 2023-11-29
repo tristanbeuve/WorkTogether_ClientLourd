@@ -12,21 +12,25 @@
             <ColumnDefinition Width="2*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
             <RowDefinition Height="2*"/>
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
 
 
-        <DockPanel x:Name="DockPanelMain" Grid.Column="1">
+        <DockPanel x:Name="DockPanelMain" Grid.Column="1" Grid.Row="0" Grid.RowSpan="2">
             <views:Home />
         </DockPanel>
-        <StackPanel VerticalAlignment="Center">
-            <Button x:Name="Home" Content="Accueil" Click="Home_Click" Grid.RowSpan="4" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="10" Width="auto" Height="50"/>
-            <Button x:Name="ListBaies" Content="Baies" Click="ListBaies_Click" Grid.RowSpan="1"  Width="auto" Height="50"/>
-            <Button x:Name="ListUnites" Content="Unités" Click="ListUnite_Click" Margin="10" Grid.RowSpan="2" Width="auto" Height="50"/>
-            <Button x:Name="ListReservation" Content="Reservtaions" Click="ListReservation_Click" Grid.RowSpan="3" Margin="10" Width="auto" Height="50"/>
+
+        <Button x:Name="Home" Content="Accueil" Click="Home_Click" Grid.RowSpan="4" HorizontalAlignment="Right" VerticalAlignment="Top" MinWidth="150"  MinHeight="100"/>
+
+
+        <StackPanel VerticalAlignment="Center" Grid.Row="1">
+            <Button x:Name="ListBaies" Content="Baies" Click="ListBaies_Click"  MinWidth="150"  VerticalAlignment="Top" MinHeight="100"/>
+            <Button x:Name="ListUnites" Content="Unités" Click="ListUnite_Click" MinWidth="150" VerticalAlignment="Center"  MinHeight="100"/>
+            <Button x:Name="ListReservation" Content="Reservtaions" Click="ListReservation_Click" VerticalAlignment="Bottom" MinWidth="150" MinHeight="100"/>
         </StackPanel>
 
-        <Button x:Name="Fermer" Content="Fermer" Click="Fermer_Click" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="10"/>
+        <Button x:Name="Fermer" Content="Fermer" Click="Fermer_Click" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="10"/>
     </Grid>
 </Window>

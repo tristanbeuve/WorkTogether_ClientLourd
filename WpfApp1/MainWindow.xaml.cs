@@ -25,8 +25,10 @@ namespace WpfApp1
         {
             InitializeComponent();
 
+            this.DataContext = new MainWindowsViewModel();
 
-            WindowLogin windowLogin =new WindowLogin();
+
+            WindowLogin windowLogin = new WindowLogin();
             windowLogin.ShowDialog();
 
             if (windowLogin.DialogResult == false)
@@ -51,12 +53,14 @@ namespace WpfApp1
         {
 
             DockPanelMain.Children.Clear();
+            DockPanelMain.Children.Add(new WpfApp1.View.Unite());
         }
 
         private void ListReservation_Click(object sender, RoutedEventArgs e)
         {
 
             DockPanelMain.Children.Clear();
+            DockPanelMain.Children.Add(new WpfApp1.View.Reservation());
         }
 
         private void Fermer_Click(object sender, RoutedEventArgs e)
