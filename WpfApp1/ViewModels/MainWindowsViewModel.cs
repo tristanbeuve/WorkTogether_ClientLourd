@@ -33,6 +33,10 @@ namespace WpfApp1.ViewModels
 
         private Reservation? _SelectedReservation;
 
+        private ObservableCollection<User> _Users;
+
+        private User? _SelectedUser;
+
         #endregion
 
         #region Properties
@@ -71,6 +75,8 @@ namespace WpfApp1.ViewModels
         public DelegateCommand<object> CommandAddBaie { get => _CommandAddBaie; set => _CommandAddBaie = value; }
         public DelegateCommand<object> CommandRemoveBaie { get => _CommandRemoveBaie; set => _CommandRemoveBaie = value; }
         public DelegateCommand<object> CommandUpdateBaie { get => _CommandUpdateBaie; set => _CommandUpdateBaie = value; }
+        public ObservableCollection<User> Users { get => _Users; set => _Users = value; }
+        public User? SelectedUser { get => _SelectedUser; set => _SelectedUser = value; }
 
         #endregion
 
@@ -87,6 +93,7 @@ namespace WpfApp1.ViewModels
                 this.Baies = new ObservableCollection<Baie>(context.Baies);
                 this.Unites = new ObservableCollection<Unite>(context.Unites);
                 this.Reservation = new ObservableCollection<Reservation>(context.Reservations);
+                this.Users = new ObservableCollection<User>(context.Users);
             }
         }
 

@@ -46,7 +46,7 @@ namespace WpfApp1
         private void ListBaies_Click(object sender, RoutedEventArgs e)
         {
             DockPanelMain.Children.Clear();
-            DockPanelMain.Children.Add(new Baies());
+            DockPanelMain.Children.Add(new WpfApp1.View.Baies());
         }
 
         private void ListUnite_Click(object sender, RoutedEventArgs e)
@@ -63,9 +63,17 @@ namespace WpfApp1
             DockPanelMain.Children.Add(new WpfApp1.View.Reservation());
         }
 
+        private void ListUser_Click(object sender, RoutedEventArgs e)
+        {
+            DockPanelMain.Children.Clear();
+            DockPanelMain.Children.Add(new WpfApp1.View.Users());
+        }
+
         private void Fermer_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
+
+        
     }
 }
