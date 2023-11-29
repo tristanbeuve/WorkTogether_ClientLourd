@@ -1,0 +1,14 @@
+C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WorkTogetherDBLib\bin\Debug\net8.0\WorkTogetherDBLib.deps.json
+C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WorkTogetherDBLib\bin\Debug\net8.0\WorkTogetherDBLib.runtimeconfig.json
+C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WorkTogetherDBLib\bin\Debug\net8.0\WorkTogetherDBLib.dll
+C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WorkTogetherDBLib\bin\Debug\net8.0\WorkTogetherDBLib.pdb
+C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WorkTogetherDBLib\obj\Debug\net8.0\WorkTogetherDBLib.csproj.AssemblyReference.cache
+C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WorkTogetherDBLib\obj\Debug\net8.0\WorkTogetherDBLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WorkTogetherDBLib\obj\Debug\net8.0\WorkTogetherDBLib.AssemblyInfoInputs.cache
+C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WorkTogetherDBLib\obj\Debug\net8.0\WorkTogetherDBLib.AssemblyInfo.cs
+C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WorkTogetherDBLib\obj\Debug\net8.0\WorkTogetherDBLib.csproj.CoreCompileInputs.cache
+C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WorkTogetherDBLib\obj\Debug\net8.0\WorkTogetherDBLib.dll
+C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WorkTogetherDBLib\obj\Debug\net8.0\refint\WorkTogetherDBLib.dll
+C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WorkTogetherDBLib\obj\Debug\net8.0\WorkTogetherDBLib.pdb
+C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WorkTogetherDBLib\obj\Debug\net8.0\WorkTogetherDBLib.genruntimeconfig.cache
+C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WorkTogetherDBLib\obj\Debug\net8.0\ref\WorkTogetherDBLib.dll
