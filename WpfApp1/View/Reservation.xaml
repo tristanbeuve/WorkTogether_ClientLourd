@@ -16,9 +16,8 @@
             <RowDefinition Height="2*"/>
             <RowDefinition Height="100"/>
         </Grid.RowDefinitions>
-        <DataGrid ItemsSource="{Binding Reservation}" SelectedItem="{Binding SelectedBaies}" AutoGenerateColumns="True" Name="DatagridBaie" Grid.Row="0" Grid.Column="1"/>
+        <DataGrid ItemsSource="{Binding Reservation}" SelectedItem="{Binding SelectedReservation}" AutoGenerateColumns="True" Name="DatagridBaie" Grid.Row="0" Grid.Column="1"/>
 
-        <Button x:Name="Ajouter" Content="Ajouter" Click="Ajouter_Click"  MinWidth="100"  HorizontalAlignment="Left" MinHeight="50" Grid.Row="1" Grid.Column="1"/>
         <Button x:Name="Supprimer" Content="Supprimer" Click="Supprimer_Click"  MinWidth="100"  HorizontalAlignment="Center" MinHeight="50" Grid.Row="1" Grid.Column="1"/>
         <Button x:Name="Modifier" Content="Modifier" Click="Modifier_Click"  MinWidth="100"  HorizontalAlignment="Right"  MinHeight="50" Grid.Row="1" Grid.Column="1"/>
     </Grid>

@@ -24,21 +24,23 @@ namespace WpfApp1.View
         public Baies()
         {
             InitializeComponent();
+
+            this.DataContext = new BaieViewModel();
         }
 
         private void Ajouter_Click(object sender, RoutedEventArgs e)
         {
-            ((MainWindowsViewModel)this.DataContext).AddBaie();
+            ((BaieViewModel)this.DataContext).AddBaie();
         }
 
         private void Supprimer_Click(object sender, RoutedEventArgs e)
         {
-            ((MainWindowsViewModel)this.DataContext).RemoveBaie();
+            ((BaieViewModel)this.DataContext).RemoveBaie();
         }
 
         private void Modifier_Click(object sender, RoutedEventArgs e)
         {
-            ((MainWindowsViewModel)this.DataContext).UpdateBaie();
+            ((BaieViewModel)this.DataContext).UpdateBaie();
         }
     }
 }

@@ -12,3 +12,4 @@ C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\Wor
 C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WorkTogetherDBLib\obj\Debug\net8.0\WorkTogetherDBLib.pdb
 C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WorkTogetherDBLib\obj\Debug\net8.0\WorkTogetherDBLib.genruntimeconfig.cache
 C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WorkTogetherDBLib\obj\Debug\net8.0\ref\WorkTogetherDBLib.dll
+C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WorkTogetherDBLib\obj\Debug\net8.0\WorkTogetherDBLib.sourcelink.json

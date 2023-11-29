@@ -24,24 +24,25 @@ namespace WpfApp1.View
         public Unite()
         {
             InitializeComponent();
+            this.DataContext = new UniteViewModel();
         }
 
 
         private void Ajouter_Click(object sender, RoutedEventArgs e)
         {
-            ((MainWindowsViewModel)this.DataContext).AddBaie();
+            ((BaieViewModel)this.DataContext).AddBaie();
         }
 
 
         private void Supprimer_Click(object sender, RoutedEventArgs e)
         {
 
-            ((MainWindowsViewModel)this.DataContext).RemoveUnite();
+            ((UniteViewModel)this.DataContext).RemoveUnite();
         }
 
         private void Modifier_Click(object sender, RoutedEventArgs e)
         {
-            ((MainWindowsViewModel)this.DataContext).UpdateUnite();
+            ((UniteViewModel)this.DataContext).UpdateUnite();
         }
     }
 }

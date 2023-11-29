@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp1.ViewModels;
 
 namespace WpfApp1.View
 {
@@ -23,22 +24,19 @@ namespace WpfApp1.View
         public Reservation()
         {
             InitializeComponent();
+
+            this.DataContext = new ReservationViewModel();
         }
 
-
-        private void Ajouter_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
 
         private void Supprimer_Click(object sender, RoutedEventArgs e)
         {
-
+            ((ReservationViewModel)this.DataContext).RemoveReservation();
         }
 
         private void Modifier_Click(object sender, RoutedEventArgs e)
         {
-
+            ((ReservationViewModel)this.DataContext).UpdateReservation();
         }
     }
 }

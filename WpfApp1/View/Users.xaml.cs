@@ -24,21 +24,21 @@ namespace WpfApp1.View
         public Users()
         {
             InitializeComponent();
-            this.DataContext = new MainWindowsViewModel();
+            this.DataContext = new UserViewModel();
         }
         private void Ajouter_Click(object sender, RoutedEventArgs e)
         {
-            ((MainWindowsViewModel)this.DataContext).AddUser();
+            ((UserViewModel)this.DataContext).AddUser();
         }
 
         private void Supprimer_Click(object sender, RoutedEventArgs e)
         {
-            ((MainWindowsViewModel)this.DataContext).RemoveUser();
+            ((UserViewModel)this.DataContext).RemoveUser();
         }
 
         private void Modifier_Click(object sender, RoutedEventArgs e)
         {
-            ((MainWindowsViewModel)this.DataContext).UpdateUser();
+            ((UserViewModel)this.DataContext).UpdateUser();
         }
     }
 }
