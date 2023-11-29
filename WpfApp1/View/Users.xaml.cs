@@ -28,17 +28,17 @@ namespace WpfApp1.View
         }
         private void Ajouter_Click(object sender, RoutedEventArgs e)
         {
-
+            ((MainWindowsViewModel)this.DataContext).AddUser();
         }
 
         private void Supprimer_Click(object sender, RoutedEventArgs e)
         {
-
+            ((MainWindowsViewModel)this.DataContext).RemoveUser();
         }
 
         private void Modifier_Click(object sender, RoutedEventArgs e)
         {
-
+            ((MainWindowsViewModel)this.DataContext).UpdateUser();
         }
     }
 }

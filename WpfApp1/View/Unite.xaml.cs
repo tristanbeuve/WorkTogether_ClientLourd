@@ -31,17 +31,17 @@ namespace WpfApp1.View
         {
             ((MainWindowsViewModel)this.DataContext).AddBaie();
         }
-   
 
-    private void Supprimer_Click(object sender, RoutedEventArgs e)
-    {
 
-        ((MainWindowsViewModel)this.DataContext).RemoveUnite();
+        private void Supprimer_Click(object sender, RoutedEventArgs e)
+        {
+
+            ((MainWindowsViewModel)this.DataContext).RemoveUnite();
+        }
+
+        private void Modifier_Click(object sender, RoutedEventArgs e)
+        {
+            ((MainWindowsViewModel)this.DataContext).UpdateUnite();
+        }
     }
-
-    private void Modifier_Click(object sender, RoutedEventArgs e)
-    {
-
-    }
-}
 }
