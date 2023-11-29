@@ -24,7 +24,6 @@ namespace WpfApp1.View
         public Baies()
         {
             InitializeComponent();
-            this.DataContext = new MainWindowsViewModel();
         }
 
         private void Ajouter_Click(object sender, RoutedEventArgs e)

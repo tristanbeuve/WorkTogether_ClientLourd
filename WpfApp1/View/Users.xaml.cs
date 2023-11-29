@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp1.ViewModels;
 
 namespace WpfApp1.View
 {
@@ -23,6 +24,7 @@ namespace WpfApp1.View
         public Users()
         {
             InitializeComponent();
+            this.DataContext = new MainWindowsViewModel();
         }
         private void Ajouter_Click(object sender, RoutedEventArgs e)
         {

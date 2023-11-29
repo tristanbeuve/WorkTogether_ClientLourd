@@ -25,13 +25,33 @@ namespace WpfApp1.ViewModels
 
         private DelegateCommand<object> _CommandUpdateBaie;
 
+
         private ObservableCollection<Unite> _Unites;
 
         private Unite? _SelectedUnites;
 
+        private DelegateCommand<object> _CommandAddUnite;
+
+        private DelegateCommand<object> _CommandRemoveUnite;
+
+        private DelegateCommand<object> _CommandUpdateUnite;
+
+        private ObservableCollection<TypeUnite> _TypeUnites;
+
+        private DelegateCommand<object> _SelectedTypeUnite;
+
+
+
         private ObservableCollection<Reservation> _Reservation;
 
         private Reservation? _SelectedReservation;
+
+        private DelegateCommand<object> _CommandAddReservation;
+
+        private DelegateCommand<object> _CommandRemoveReservation;
+
+        private DelegateCommand<object> _CommandUpdateReservation;
+
 
         private ObservableCollection<User> _Users;
 
@@ -77,6 +97,14 @@ namespace WpfApp1.ViewModels
         public DelegateCommand<object> CommandUpdateBaie { get => _CommandUpdateBaie; set => _CommandUpdateBaie = value; }
         public ObservableCollection<User> Users { get => _Users; set => _Users = value; }
         public User? SelectedUser { get => _SelectedUser; set => _SelectedUser = value; }
+        public DelegateCommand<object> CommandAddUnite { get => _CommandAddUnite; set => _CommandAddUnite = value; }
+        public DelegateCommand<object> CommandRemoveUnite { get => _CommandRemoveUnite; set => _CommandRemoveUnite = value; }
+        public DelegateCommand<object> CommandUpdateUnite { get => _CommandUpdateUnite; set => _CommandUpdateUnite = value; }
+        public DelegateCommand<object> CommandAddReservation { get => _CommandAddReservation; set => _CommandAddReservation = value; }
+        public DelegateCommand<object> CommandRemoveReservation { get => _CommandRemoveReservation; set => _CommandRemoveReservation = value; }
+        public DelegateCommand<object> CommandUpdateReservation { get => _CommandUpdateReservation; set => _CommandUpdateReservation = value; }
+        public ObservableCollection<TypeUnite> TypeUnites { get => _TypeUnites; set => _TypeUnites = value; }
+        public DelegateCommand<object> SelectedTypeUnite { get => _SelectedTypeUnite; set => _SelectedTypeUnite = value; }
 
         #endregion
 
@@ -94,6 +122,7 @@ namespace WpfApp1.ViewModels
                 this.Unites = new ObservableCollection<Unite>(context.Unites);
                 this.Reservation = new ObservableCollection<Reservation>(context.Reservations);
                 this.Users = new ObservableCollection<User>(context.Users);
+                this.TypeUnites = new ObservableCollection<TypeUnite>(context.TypeUnites);
             }
         }
 
@@ -145,6 +174,24 @@ namespace WpfApp1.ViewModels
         internal bool CanUpdateBaie(object? parameter = null) => this.SelectedBaies != null;
 
 
+
+        internal void AddUnite(object? parameter = null)
+        {
+            using (PpeContext context = new())
+            {
+                Unite Unites = new Unite();
+                
+                Unites.IdentifiantBaieId = 1 ;
+                Unites.IdentifiantTypeUniteId = 1;
+                Unites.Status = false;
+                Unites.Numero = "111";
+                context.Unites.Add(Unites);
+                this.Unites.Add(Unites);
+                context.SaveChanges();
+            }
+        }
+
+        internal bool CanAddUnite(object? parameter = null) => this.SelectedBaies != null;
         #endregion
 
     }

@@ -29,17 +29,20 @@ namespace WpfApp1.View
 
         private void Ajouter_Click(object sender, RoutedEventArgs e)
         {
-
+            ((MainWindowsViewModel)this.DataContext).AddUnite();
         }
+   
 
-        private void Supprimer_Click(object sender, RoutedEventArgs e)
-        {
+    private void Supprimer_Click(object sender, RoutedEventArgs e)
+    {
 
-        }
-
-        private void Modifier_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
+        ((MainWindowsViewModel)this.DataContext).AddUnite();
     }
+
+    private void Modifier_Click(object sender, RoutedEventArgs e)
+    {
+
+        ((MainWindowsViewModel)this.DataContext).AddUnite();
+    }
+}
 }
