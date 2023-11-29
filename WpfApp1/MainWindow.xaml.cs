@@ -12,6 +12,7 @@ using WpfApp1.Windows;
 using WpfApp1.ViewModels;
 using WorkTogetherDBLib.Class;
 using WpfApp1.View;
+using System.Globalization;
 
 namespace WpfApp1
 {
@@ -24,6 +25,7 @@ namespace WpfApp1
         {
             InitializeComponent();
 
+
             WindowLogin windowLogin =new WindowLogin();
             windowLogin.ShowDialog();
 
@@ -31,6 +33,12 @@ namespace WpfApp1
             {
                 this.Close();
             }
+        }
+
+        private void Home_Click(object sender, RoutedEventArgs e)
+        {
+            DockPanelMain.Children.Clear();
+            DockPanelMain.Children.Add(new Home());
         }
 
         private void ListBaies_Click(object sender, RoutedEventArgs e)
@@ -51,9 +59,9 @@ namespace WpfApp1
             DockPanelMain.Children.Clear();
         }
 
-        private void Menu_Click(object sender, RoutedEventArgs e)
+        private void Fermer_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
         }
     }
 }

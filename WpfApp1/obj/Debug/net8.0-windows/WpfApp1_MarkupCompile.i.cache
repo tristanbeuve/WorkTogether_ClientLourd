@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WpfApp1\App.xaml
-52107867405
+51341304023
 
-11-5636360
+111506436111
 229-455382946
-MainWindow.xaml;Styles\Style.xaml;View\Baies.xaml;View\Menu.xaml;Windows\WindowLogin.xaml;
+MainWindow.xaml;Styles\Style.xaml;View\Baies.xaml;View\Home.xaml;Windows\WindowLogin.xaml;
 
-False
+True
 

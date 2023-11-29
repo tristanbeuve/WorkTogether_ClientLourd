@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="WpfApp1.View.Home"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1.View"
+        mc:Ignorable="d"
+        Height="auto" Width="800">
+    <Grid ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="300"/>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Image Height="auto" Source='C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WpfApp1\img\logo.png' Grid.Column="1" Grid.Row="0" VerticalAlignment="Top"/>
+        <TextBlock Grid.Row="1" Text="WorkTogether" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="50"/>
+        <TextBlock Grid.Row="2" Text="Bienvenue" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="40"/>
+    </Grid>
+</UserControl>

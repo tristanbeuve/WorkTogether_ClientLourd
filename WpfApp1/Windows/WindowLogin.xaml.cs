@@ -56,9 +56,10 @@ namespace WpfApp1.Windows
             using (PpeContext context = new PpeContext())
             {
 
-            //    User user = context.Users.FirstOrDefault(u => u.Email == useremail);
+                User user = context.Users.FirstOrDefault(u => u.Email == useremail);
+                //user.Password = user.Password.Replace("$2y$13$", "$2a$13$");
 
-            //    bool isPasswordCorrect = BCrypt.Net.BCrypt.Verify(password, user.Password);
+                //bool isPasswordCorrect = BCrypt.Net.BCrypt.Verify(password, user.Password);
 
                 //return isPasswordCorrect;
                 return true;

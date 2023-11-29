@@ -67,6 +67,7 @@ C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\Wpf
 C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WpfApp1\obj\Debug\net8.0-windows\View\Baies.g.cs
 C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WpfApp1\obj\Debug\net8.0-windows\View\Baies.baml
 C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WpfApp1\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
-C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WpfApp1\obj\Debug\net8.0-windows\View\Menu.g.cs
-C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WpfApp1\obj\Debug\net8.0-windows\View\Menu.baml
 C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WpfApp1\bin\Debug\net8.0-windows\BCrypt.Net.dll
+C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WpfApp1\obj\Debug\net8.0-windows\WpfApp1.sourcelink.json
+C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WpfApp1\obj\Debug\net8.0-windows\View\Home.g.cs
+C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WpfApp1\obj\Debug\net8.0-windows\View\Home.baml
