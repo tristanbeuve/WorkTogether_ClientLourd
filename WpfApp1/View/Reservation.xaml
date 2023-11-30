@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:WpfApp1.View"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid ShowGridLines="True">
+    <Grid ShowGridLines="False">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="100" />
             <ColumnDefinition Width="2*" />
@@ -22,7 +22,16 @@
 
         <Label Grid.Column="1"  Grid.Row="0" Content="Reservation" HorizontalAlignment="Center" FontWeight="Bold" FontSize="75"/>
 
-        <DataGrid ItemsSource="{Binding Reservation}" SelectedItem="{Binding SelectedReservation}" AutoGenerateColumns="True" Name="DatagridBaie" Grid.Row="1" Grid.Column="1" IsReadOnly="{Binding Path=User, Source={x:Static Application.Current}, Converter={StaticResource SharedObjectToisReadOnlyConverter}, ConverterParameter='ROLE_ADMIN'}"/>
+        <DataGrid ItemsSource="{Binding Reservation}" SelectedItem="{Binding SelectedReservation}" AutoGenerateColumns="False" SelectionMode="Single" Name="DatagridBaie" Grid.Row="1" Grid.Column="1" IsReadOnly="{Binding Path=User, Source={x:Static Application.Current}, Converter={StaticResource SharedObjectToisReadOnlyConverter}, ConverterParameter='ROLE_ADMIN'}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Numéro :" Binding="{Binding Numero}" Width="*"/>
+                <DataGridTextColumn Header="Date de début :" Binding="{Binding DateDeb}" Width="*"/>
+                <DataGridTextColumn Header="Date de fin :" Binding="{Binding DateEnd}" Width="*"/>
+                <DataGridTextColumn Header="Renouvellement Automatique :" Binding="{Binding RenAuto}" Width="*"/>
+                <DataGridTextColumn Header="Quantité :" Binding="{Binding Quantity}" Width="*"/>
+                <DataGridTextColumn Header="Delaie :" Binding="{Binding Delaie}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
 
         <Button x:Name="Supprimer" Content="Supprimer" Click="Supprimer_Click"  MinWidth="100"  HorizontalAlignment="Center" MinHeight="50" Grid.Row="2" Grid.Column="1" Visibility="{Binding Path=User, Source={x:Static Application.Current}, Converter={StaticResource SharedUserRoleToVisibilityConverter}, ConverterParameter='ROLE_ADMIN'}"/>
         <Button x:Name="Modifier" Content="Modifier" Click="Modifier_Click"  MinWidth="100"  HorizontalAlignment="Right"  MinHeight="50" Grid.Row="2" Grid.Column="1" Visibility="{Binding Path=User, Source={x:Static Application.Current}, Converter={StaticResource SharedUserRoleToVisibilityConverter}, ConverterParameter='ROLE_ADMIN'}"/>

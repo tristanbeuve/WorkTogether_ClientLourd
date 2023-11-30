@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:WpfApp1.View"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid ShowGridLines="True">
+    <Grid ShowGridLines="False">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="100" />
             <ColumnDefinition Width="2*" />
@@ -23,7 +23,14 @@
 
         <Label Grid.Column="1"  Grid.Row="0" Content="Utilisateurs" HorizontalAlignment="Center" FontWeight="Bold" FontSize="75"/>
 
-        <DataGrid ItemsSource="{Binding Users}" SelectedItem="{Binding SelectedUser}" AutoGenerateColumns="True" Name="DatagridBaie" Grid.Row="1" Grid.Column="1" IsReadOnly="{Binding Path=User, Source={x:Static Application.Current}, Converter={StaticResource SharedObjectToisReadOnlyConverter}, ConverterParameter='ROLE_ADMIN'}"/>
+        <DataGrid ItemsSource="{Binding Users}" SelectedItem="{Binding SelectedUser}" AutoGenerateColumns="False" Name="DatagridBaie" Grid.Row="1" Grid.Column="1" IsReadOnly="{Binding Path=User, Source={x:Static Application.Current}, Converter={StaticResource SharedObjectToisReadOnlyConverter}, ConverterParameter='ROLE_ADMIN'}" SelectionMode="Single">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Nom" Binding="{Binding Nom}" Width="*"/>
+                <DataGridTextColumn Header="Prenom" Binding="{Binding Prenom}" Width="*"/>
+                <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="*"/>
+                <DataGridTextColumn Header="Role" Binding="{Binding Roles}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
 
         <Button x:Name="Ajouter" Content="Ajouter" Click="Ajouter_Click"  MinWidth="100"  HorizontalAlignment="Left" MinHeight="50" Grid.Row="2" Grid.Column="1" Visibility="{Binding Path=User, Source={x:Static Application.Current}, Converter={StaticResource SharedUserRoleToVisibilityConverter}, ConverterParameter='ROLE_ADMIN'}"/>
         <Button x:Name="Supprimer" Content="Supprimer" Click="Supprimer_Click"  MinWidth="100"  HorizontalAlignment="Center" MinHeight="50" Grid.Row="2" Grid.Column="1" Visibility="{Binding Path=User, Source={x:Static Application.Current}, Converter={StaticResource SharedUserRoleToVisibilityConverter}, ConverterParameter='ROLE_ADMIN'}"/>

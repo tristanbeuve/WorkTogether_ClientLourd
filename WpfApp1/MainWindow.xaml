@@ -32,6 +32,6 @@
             <Button x:Name="ListUser" Content="Utilisateurs" Click="ListUser_Click" VerticalAlignment="Bottom" MinWidth="150" MinHeight="100" Style="{StaticResource ButtonStyle}"/>
         </StackPanel>
 
-        <Button x:Name="Fermer" Content="Fermer" Click="Fermer_Click" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="10" Style="{StaticResource ButtonStyle}"/>
+        <Button x:Name="Fermer" Content="Fermer" Click="Fermer_Click" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="10" Style="{StaticResource ButtonStyleLogin}"/>
     </Grid>
 </Window>
