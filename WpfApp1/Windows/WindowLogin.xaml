@@ -34,40 +34,12 @@
             <Label Grid.Column="0" Grid.Row="3" Content="Mot de passe :" VerticalAlignment="Center" />
             <PasswordBox Grid.Column="1" Grid.Row="3" Name="txtPassword" VerticalAlignment="Center" HorizontalAlignment="Center" Width="200" />
 
-        <Button x:Name="Log" Grid.Column="1" Grid.Row="5" Content="Se Connecter" Click="LoginButton_Click" HorizontalAlignment="Left" VerticalAlignment="Center" Style="{Binding Button}">
-            
-            <Button.Template>
-                <ControlTemplate TargetType="Button">
-                    <Border Width="80" Height="25"
-                                        CornerRadius="10" Background="{TemplateBinding Background}">
-                        <ContentPresenter VerticalAlignment="Center"
-                                                      HorizontalAlignment="Center"/>
-                    </Border>
-                </ControlTemplate>
-            </Button.Template>
-        </Button>
+        <Button x:Name="Log" Grid.Column="1" Grid.Row="5" Content="Se Connecter" Click="LoginButton_Click" HorizontalAlignment="Left" VerticalAlignment="Center" Style="{StaticResource ButtonStyleLogin}" />
 
-        <Button x:Name="Close" Grid.Column="1" Grid.Row="5" Content="Fermer" Click="CloseButton_Click" VerticalAlignment="Bottom" HorizontalAlignment="Right" >
-            <Button.Style>
-                <Style TargetType="Button">
-                    <Setter Property="Background" Value="#28AEED"/>
-                    <Style.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="#1DFFB4"/>
-                        </Trigger>
-                    </Style.Triggers>
-                </Style>
-            </Button.Style>
-            <Button.Template>
-                <ControlTemplate TargetType="Button">
-                    <Border Width="80" Height="25"
-                                        CornerRadius="10" Background="{TemplateBinding Background}">
-                        <ContentPresenter VerticalAlignment="Center"
-                                                      HorizontalAlignment="Center"/>
-                    </Border>
-                </ControlTemplate>
-            </Button.Template>
-        </Button>
+
+        <Button x:Name="Close" Grid.Column="1" Grid.Row="5" Content="Fermer" Click="CloseButton_Click" VerticalAlignment="Bottom" HorizontalAlignment="Right"  Style="{StaticResource ButtonStyleLogin}" />
+
+
 
 
     </Grid>

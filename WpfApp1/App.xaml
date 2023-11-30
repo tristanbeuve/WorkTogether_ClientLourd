@@ -5,7 +5,12 @@
              xmlns:convertor="clr-namespace:WorkTogetherWPF.Convertor"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <convertor:UserRoleToVisibilityConverter x:Key="SharedUserRoleToVisibilityConverter"/>
-        <convertor:ObjectToisReadOnlyConverter x:Key="SharedObjectToisReadOnlyConverter"/>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="./Styles/Style.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <convertor:UserRoleToVisibilityConverter x:Key="SharedUserRoleToVisibilityConverter"/>
+            <convertor:ObjectToisReadOnlyConverter x:Key="SharedObjectToisReadOnlyConverter"/>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

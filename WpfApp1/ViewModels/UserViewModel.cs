@@ -64,7 +64,6 @@ namespace WpfApp1.ViewModels
                     Users.Email = form.Email;
                     Users.Password = BCrypt.Net.BCrypt.HashPassword(form.Password);
                     BCrypt.Net.BCrypt.HashPassword(form.Password, 13);
-                    //Users.Password.Replace("$2a$11$", "$2y$13$");
                     Users.Roles = form.Role;
                     Users.Prenom = form.Prenom;
                     Users.Nom = form.Nom;
