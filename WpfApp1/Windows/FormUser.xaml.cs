@@ -37,7 +37,7 @@ namespace WpfApp1.Windows
         {
             if (Password == ConfirmPassword)
             {
-                Role = "[\'ROLE_ADMIN\']";
+                Role = "[\"ROLE_ADMIN\"]";
                 this.DialogResult = true;
                 this.Close();
             }
@@ -47,7 +47,7 @@ namespace WpfApp1.Windows
         {
             if (Password == ConfirmPassword)
             {
-                Role = "[\'ROLE_COMPTA\']";
+                Role = "[\"ROLE_COMPTA\"]";
                 this.DialogResult = true;
                 this.Close();
             }
@@ -57,7 +57,7 @@ namespace WpfApp1.Windows
         {
             if (Password == ConfirmPassword)
             {
-                Role = "[\'ROLE_CUSTOMER\']";
+                Role = "[\"ROLE_CUSTOMER\"]";
                 this.DialogResult = true;
                 this.Close();
             }

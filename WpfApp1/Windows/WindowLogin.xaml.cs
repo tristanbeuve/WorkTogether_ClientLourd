@@ -56,16 +56,14 @@ namespace WpfApp1.Windows
 
             using (PpeContext context = new PpeContext())
             {
-                ((App)Application.Current).User = context.Users.First();
 
-                //User user = context.Users.FirstOrDefault(u => u.Email == useremail);
-                //user.Password = user.Password.Replace("$2y$13$", "$2a$13$");
+                User? user = context.Users.FirstOrDefault(u => u.Email == useremail);
 
-                //bool isPasswordCorrect = BCrypt.Net.BCrypt.Verify(password, user.Password);
+                bool isPasswordCorrect = BCrypt.Net.BCrypt.Verify(password, user.Password, false, BCrypt.Net.HashType.SHA256);
 
+                ((App)Application.Current).User = user;
 
-                //return isPasswordCorrect;
-                return true;
+                return isPasswordCorrect;
             }
         }
     }

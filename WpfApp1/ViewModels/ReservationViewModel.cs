@@ -90,6 +90,7 @@ namespace WpfApp1.ViewModels
 
         internal bool CanUpdateReservation(object? parameter = null) => this.SelectedReservation != null;
 
+
         #endregion
     }
 }

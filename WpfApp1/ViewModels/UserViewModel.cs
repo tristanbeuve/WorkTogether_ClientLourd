@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using WorkTogetherDBLib.Class;
+using WpfApp1.View;
 using WpfApp1.Windows;
 
 namespace WpfApp1.ViewModels
@@ -62,7 +63,8 @@ namespace WpfApp1.ViewModels
                     User Users = new User();
                     Users.Email = form.Email;
                     Users.Password = BCrypt.Net.BCrypt.HashPassword(form.Password);
-                    Users.Password.Replace("$2a$11$", "$2y$13$");
+                    BCrypt.Net.BCrypt.HashPassword(form.Password, 13);
+                    //Users.Password.Replace("$2a$11$", "$2y$13$");
                     Users.Roles = form.Role;
                     Users.Prenom = form.Prenom;
                     Users.Nom = form.Nom;

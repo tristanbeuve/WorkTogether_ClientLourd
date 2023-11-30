@@ -2,8 +2,10 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:WpfApp1"
+             xmlns:convertor="clr-namespace:WorkTogetherWPF.Convertor"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <ResourceDictionary Source="./Styles/Style.xaml" />
+        <convertor:UserRoleToVisibilityConverter x:Key="SharedUserRoleToVisibilityConverter"/>
+        <convertor:ObjectToisReadOnlyConverter x:Key="SharedObjectToisReadOnlyConverter"/>
     </Application.Resources>
 </Application>
