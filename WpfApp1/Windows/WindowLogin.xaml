@@ -34,7 +34,7 @@
             <Label Grid.Column="0" Grid.Row="3" Content="Mot de passe :" VerticalAlignment="Center" />
             <PasswordBox Grid.Column="1" Grid.Row="3" Name="txtPassword" VerticalAlignment="Center" HorizontalAlignment="Center" Width="200" />
 
-            <Button Grid.Column="1" Grid.Row="5" Content="Se Connecter" Click="LoginButton_Click" HorizontalAlignment="Left" VerticalAlignment="Center" />
+            <Button x:Name="Log" Grid.Column="1" Grid.Row="5" Content="Se Connecter" Click="LoginButton_Click" HorizontalAlignment="Left" VerticalAlignment="Center" />
             <Button x:Name="Close" Grid.Column="1" Grid.Row="5" Content="Fermer" Click="CloseButton_Click" VerticalAlignment="Bottom" HorizontalAlignment="Right" />
 
 

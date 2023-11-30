@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using WorkTogetherDBLib.Class;
+using WpfApp1.Windows;
 
 namespace WpfApp1.ViewModels
 {
@@ -54,16 +55,25 @@ namespace WpfApp1.ViewModels
         {
             using (PpeContext context = new())
             {
-                User Users = new User();
-                Users.Email = "admin@2admin.com";
-                //Users.Password = BCrypt.Net.BCrypt.HashPassword("Not24get");
-                //Users.Password.Replace("$2a$13$", "$2y$13$");
-                Users.Roles = "[\'ROLE_ADMIN\']";
-                Users.Prenom = "Josselin";
-                Users.Nom = "Yann";
-                context.Users.Add(Users);
-                this.Users.Add(Users);
-                context.SaveChanges();
+                FormUser form = new FormUser();
+                form.ShowDialog();
+                if(form.DialogResult == true)
+                {
+                    User Users = new User();
+                    Users.Email = form.Email;
+                    Users.Password = BCrypt.Net.BCrypt.HashPassword(form.Password);
+                    Users.Password.Replace("$2a$11$", "$2y$13$");
+                    Users.Roles = form.Role;
+                    Users.Prenom = form.Prenom;
+                    Users.Nom = form.Nom;
+                    context.Users.Add(Users);
+                    this.Users.Add(Users);
+                    context.SaveChanges();
+                }
+                else
+                {
+                    MessageBox.Show("L'ajout a été interrompu");
+                }
             }
         }
 

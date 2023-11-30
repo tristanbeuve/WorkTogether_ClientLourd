@@ -23,6 +23,7 @@ namespace WpfApp1.Windows
         public WindowLogin()
         {
             InitializeComponent();
+            Log.Focus();
         }
 
         private void CloseButton_Click(object sender, RoutedEventArgs e)
@@ -55,11 +56,13 @@ namespace WpfApp1.Windows
 
             using (PpeContext context = new PpeContext())
             {
+                ((App)Application.Current).User = context.Users.First();
 
                 //User user = context.Users.FirstOrDefault(u => u.Email == useremail);
                 //user.Password = user.Password.Replace("$2y$13$", "$2a$13$");
 
                 //bool isPasswordCorrect = BCrypt.Net.BCrypt.Verify(password, user.Password);
+
 
                 //return isPasswordCorrect;
                 return true;

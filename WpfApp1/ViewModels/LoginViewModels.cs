@@ -31,10 +31,6 @@ namespace WpfApp1.ViewModels
             this.User = new ObservableCollection<User>(context.Users);
         }
 
-       
-
-
-
         #endregion
     }
 }

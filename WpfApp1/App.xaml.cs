@@ -17,7 +17,6 @@ namespace WpfApp1
             get { return _User; }
             set { _User = value; }
         }
-
     }
 
 }
