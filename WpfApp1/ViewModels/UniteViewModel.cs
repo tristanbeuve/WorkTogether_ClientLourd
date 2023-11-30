@@ -1,4 +1,5 @@
-﻿using Prism.Commands;
+﻿using Modules;
+using Prism.Commands;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -10,7 +11,7 @@ using WorkTogetherDBLib.Class;
 
 namespace WpfApp1.ViewModels
 {
-    internal class UniteViewModel
+    internal class UniteViewModel : ObservableObject
     {
         #region Fields
         private ObservableCollection<Unite> _Unites;

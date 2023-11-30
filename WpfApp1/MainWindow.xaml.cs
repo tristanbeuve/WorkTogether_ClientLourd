@@ -35,6 +35,8 @@ namespace WpfApp1
             {
                 this.Close();
             }
+
+            
         }
 
         private void Home_Click(object sender, RoutedEventArgs e)

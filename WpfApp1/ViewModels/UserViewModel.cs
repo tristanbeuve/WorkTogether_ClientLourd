@@ -1,4 +1,5 @@
-﻿using Prism.Commands;
+﻿using Modules;
+using Prism.Commands;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -10,7 +11,7 @@ using WorkTogetherDBLib.Class;
 
 namespace WpfApp1.ViewModels
 {
-    internal class UserViewModel
+    internal class UserViewModel : ObservableObject
     {
         #region Fields
         private ObservableCollection<User> _Users;
@@ -55,7 +56,7 @@ namespace WpfApp1.ViewModels
             {
                 User Users = new User();
                 Users.Email = "admin@2admin.com";
-                Users.Password = BCrypt.Net.BCrypt.HashPassword("Not24get");
+                //Users.Password = BCrypt.Net.BCrypt.HashPassword("Not24get");
                 //Users.Password.Replace("$2a$13$", "$2y$13$");
                 Users.Roles = "[\'ROLE_ADMIN\']";
                 Users.Prenom = "Josselin";

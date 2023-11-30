@@ -1,4 +1,6 @@
-﻿using Prism.Commands;
+﻿using Microsoft.EntityFrameworkCore;
+using Modules;
+using Prism.Commands;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -7,10 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using WorkTogetherDBLib.Class;
+using WpfApp1.View;
 
 namespace WpfApp1.ViewModels
 {
-    internal class BaieViewModel 
+    internal class BaieViewModel : ObservableObject
     {
         #region Fields
         private ObservableCollection<Baie> _Baie;
@@ -43,7 +46,7 @@ namespace WpfApp1.ViewModels
 
             using (PpeContext context = new())
             {
-                this.Baie = new ObservableCollection<Baie>(context.Baies);
+                this.Baie = new ObservableCollection<Baie>(context.Baies.Include(u => u.Unites).ThenInclude(u => u.IdentifiantReservation));
             }
         }
         #endregion
@@ -53,23 +56,21 @@ namespace WpfApp1.ViewModels
         {
             using (PpeContext context = new())
             {
-                Baie Baies = new Baie();
-                Baies.NbrEmplacement = 42;
-                Baies.Status = false;
-                context.Baies.Add(Baies);
-                this._Baie.Add(Baies);
+                Baie Baie = new Baie();
+                Baie.NbrEmplacement = 42;
+                Baie.Status = false;
+                context.Baies.Add(Baie);
+                this._Baie.Add(Baie);
                 context.SaveChanges();
 
                 for (int i = 0; i < 42; i++)
                 {
-                    Unite Unites = new Unite();
-                    Unites.IdentifiantBaieId = Baies.Id;
+                    WorkTogetherDBLib.Class.Unite Unites = (WorkTogetherDBLib.Class.Unite)Baie.Unites;
+                    Unites.IdentifiantBaieId = Baie.Id;
                     Unites.IdentifiantTypeUniteId = 1;
                     Unites.Status = false;
                     Unites.Numero = "111";
                     context.Unites.Add(Unites);
-                    //Problème de ref
-                    //this.Unite.Add(Unites);
 
                 }
                 context.SaveChanges();
@@ -83,21 +84,12 @@ namespace WpfApp1.ViewModels
         {
             using (PpeContext context = new())
             {
-                if (SelectedBaie != null)
+                if (SelectedBaie != null && SelectedBaie.Unites.All(u => u.IdentifiantReservationId == null))
                 {
-                    Baie? Baies = SelectedBaie;
-                    context.Baies.Remove(Baies);
-                    this._Baie.Remove(Baies);
+                    context.Unites.RemoveRange(SelectedBaie.Unites);
+                    context.Baies.Remove(SelectedBaie);
+                    Baie.Remove(SelectedBaie);
                     context.SaveChanges();
-                    //for (int i = 0; i < Baies.NbrEmplacement; i++)
-                    //{
-                    //    Unite Unites = SelectedUnite;
-                    //    if (Baies.Id == Unites.IdentifiantBaieId)
-                    //    {
-                    //        context.Unites.Remove(Unites);
-                    //        this.Unite.Remove(Unites);
-                    //    }
-                    //}
                 }
                 else
                 {
