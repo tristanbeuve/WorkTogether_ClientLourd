@@ -16,28 +16,57 @@ namespace WpfApp1.ViewModels
     internal class BaieViewModel : ObservableObject
     {
         #region Fields
+        /// <summary>
+        /// getter de la liste de baie
+        /// </summary>
         private ObservableCollection<Baie> _Baie;
-
+        /// <summary>
+        /// getter d'une baie séléctionné par l'utilisateur
+        /// </summary>
         private Baie? _SelectedBaie;
-
+        /// <summary>
+        /// getter de la commande AddBaie
+        /// </summary>
         private DelegateCommand<object> _CommandAddBaie;
-
+        /// <summary>
+        /// getter de la commande RemoveBaie
+        /// </summary>
         private DelegateCommand<object> _CommandRemoveBaie;
-
+        /// <summary>
+        /// getter de la commande UpdateBaie
+        /// </summary>
         private DelegateCommand<object> _CommandUpdateBaie;
 
         #endregion
 
         #region Properties
+        /// <summary>
+        /// setter de la liste de baie
+        /// </summary>
         public ObservableCollection<Baie> Baie { get => _Baie; set => _Baie = value; }
+        /// <summary>
+        /// setter de la baie selectionné par l'utilisateur
+        /// </summary>
         public Baie? SelectedBaie { get => _SelectedBaie; set => _SelectedBaie = value; }
+        /// <summary>
+        /// setter de la commande AddBaie
+        /// </summary>
         public DelegateCommand<object> CommandAddBaie { get => _CommandAddBaie; set => _CommandAddBaie = value; }
+        /// <summary>
+        /// setter de la commande RemoveBaie
+        /// </summary>
         public DelegateCommand<object> CommandRemoveBaie { get => _CommandRemoveBaie; set => _CommandRemoveBaie = value; }
+        /// <summary>
+        /// setter de la commande UpdateBaie
+        /// </summary>
         public DelegateCommand<object> CommandUpdateBaie { get => _CommandUpdateBaie; set => _CommandUpdateBaie = value; }
 
         #endregion
 
         #region Constructor
+        /// <summary>
+        /// constructeur du viewmodel et des commandes AddBaie, RemoveBaie, UpdateBaie
+        /// </summary>
         public BaieViewModel() 
         {
             CommandAddBaie = new DelegateCommand<object>(AddBaie, CanAddBaie).ObservesProperty(() => this.SelectedBaie);
@@ -52,6 +81,10 @@ namespace WpfApp1.ViewModels
         #endregion
 
         #region Methods
+        /// <summary>
+        /// définition de la commande AddBaie
+        /// </summary>
+        /// <param name="parameter"></param>
         internal void AddBaie(object? parameter = null)
         {
             using (PpeContext context = new())
@@ -76,10 +109,17 @@ namespace WpfApp1.ViewModels
                 context.SaveChanges();
             }
         }
-
+        /// <summary>
+        /// définie si une baie à été séléctionné au préalable
+        /// </summary>
+        /// <param name="parameter"></param>
+        /// <returns></returns>
         internal bool CanAddBaie(object? parameter = null) => this.SelectedBaie != null;
 
-        //Marche pas
+        /// <summary>
+        /// définition de la commande RemoveBaie
+        /// </summary>
+        /// <param name="parameter"></param>
         internal void RemoveBaie(object? parameter = null)
         {
             using (PpeContext context = new())
@@ -99,10 +139,17 @@ namespace WpfApp1.ViewModels
                 context.SaveChanges();
             }
         }
-
+        /// <summary>
+        /// définie si une baie à été séléctionné au préalable
+        /// </summary>
+        /// <param name="parameter"></param>
+        /// <returns></returns>
         internal bool CanRemoveBaie(object? parameter = null) => this.SelectedBaie != null;
 
-
+        /// <summary>
+        /// définition de la commande UpdateBaie
+        /// </summary>
+        /// <param name="parameter"></param>
         internal void UpdateBaie(object? parameter = null)
         {
             using (PpeContext context = new())
@@ -119,7 +166,11 @@ namespace WpfApp1.ViewModels
                 }
             }
         }
-
+        /// <summary>
+        /// définie si une baie à été séléctionné au préalable
+        /// </summary>
+        /// <param name="parameter"></param>
+        /// <returns></returns>
         internal bool CanUpdateBaie(object? parameter = null) => this.SelectedBaie != null;
         #endregion
     }

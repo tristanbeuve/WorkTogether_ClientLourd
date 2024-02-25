@@ -16,28 +16,56 @@ namespace WpfApp1.ViewModels
     internal class UserViewModel : ObservableObject
     {
         #region Fields
+        /// <summary>
+        /// getter de la liste des Users
+        /// </summary>
         private ObservableCollection<User> _Users;
-
+        /// <summary>
+        /// getter du User sélectionné
+        /// </summary>
         private User? _SelectedUser;
-
+        /// <summary>
+        /// getter de la commande AddUser
+        /// </summary>
         private DelegateCommand<object> _CommandAddUser;
-
+        /// <summary>
+        /// getter de la commande RemoveUser
+        /// </summary>
         private DelegateCommand<object> _CommandRemoveUser;
-
+        /// <summary>
+        /// getter de la commande UpdateUser
+        /// </summary>
         private DelegateCommand<object> _CommandUpdateUser;
 
         #endregion
 
         #region Properties
+        /// <summary>
+        /// setter de la liste Users
+        /// </summary>
         public ObservableCollection<User> Users { get => _Users; set => _Users = value; }
+        /// <summary>
+        /// setter du User sélectionné
+        /// </summary>
         public User? SelectedUser { get => _SelectedUser; set => _SelectedUser = value; }
+        /// <summary>
+        /// setter de la commande AddUser
+        /// </summary>
         public DelegateCommand<object> CommandAddUser { get => _CommandAddUser; set => _CommandAddUser = value; }
+        /// <summary>
+        /// setter de la commande RemoveUser
+        /// </summary>
         public DelegateCommand<object> CommandRemoveUser { get => _CommandRemoveUser; set => _CommandRemoveUser = value; }
+        /// <summary>
+        /// setter de la commande UpdateUser
+        /// </summary>
         public DelegateCommand<object> CommandUpdateUser { get => _CommandUpdateUser; set => _CommandUpdateUser = value; }
-
         #endregion
 
         #region Constructer
+        /// <summary>
+        /// constructeur du viewmodel et des commandes AddUser, RemoveUser, UpdateUser
+        /// </summary>
         public UserViewModel()
         {
             CommandAddUser = new DelegateCommand<object>(AddUser, CanAddUser).ObservesProperty(() => this.SelectedUser);
@@ -52,6 +80,10 @@ namespace WpfApp1.ViewModels
         #endregion
 
         #region Methods
+        /// <summary>
+        /// définition de la commande AddUser
+        /// </summary>
+        /// <param name="parameter"></param>
         internal void AddUser(object? parameter = null)
         {
             using (PpeContext context = new())
@@ -77,10 +109,15 @@ namespace WpfApp1.ViewModels
                 }
             }
         }
-
+        /// <summary>
+        /// définie si une baie à été séléctionné au préalable
+        /// </summary>
         internal bool CanAddUser(object? parameter = null) => this.SelectedUser != null;
 
-
+        /// <summary>
+        /// définition de la commande RemoveUser
+        /// </summary>
+        /// <param name="parameter"></param>
         internal void RemoveUser(object? parameter = null)
         {
             using (PpeContext context = new())
@@ -98,10 +135,15 @@ namespace WpfApp1.ViewModels
                 }
             }
         }
-
+        /// <summary>
+        /// définie si une baie à été séléctionné au préalable
+        /// </summary>
         internal bool CanRemoveUser(object? parameter = null) => this.SelectedUser != null;
 
-
+        /// <summary>
+        /// définition de la commande UpdateUser
+        /// </summary>
+        /// <param name="parameter"></param>
         internal void UpdateUser(object? parameter = null)
         {
             using (PpeContext context = new())
@@ -119,7 +161,9 @@ namespace WpfApp1.ViewModels
                 }
             }
         }
-
+        /// <summary>
+        /// définie si une baie à été séléctionné au préalable
+        /// </summary>
         internal bool CanUpdateUser(object? parameter = null) => this.SelectedUser != null;
         #endregion
     }

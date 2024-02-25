@@ -26,16 +26,29 @@ namespace WpfApp1.View
             InitializeComponent();
             this.DataContext = new UserViewModel();
         }
+        /// <summary>
+        /// cette fonction permet de déclencher la fonction AddUser
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Ajouter_Click(object sender, RoutedEventArgs e)
         {
             ((UserViewModel)this.DataContext).AddUser();
         }
-
+        /// <summary>
+        /// cette fonction permet de déclencher la fonction RemoveUser
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Supprimer_Click(object sender, RoutedEventArgs e)
         {
             ((UserViewModel)this.DataContext).RemoveUser();
         }
-
+        /// <summary>
+        /// cette fonction permet de déclencher la fonction UpdateUser
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Modifier_Click(object sender, RoutedEventArgs e)
         {
             ((UserViewModel)this.DataContext).UpdateUser();

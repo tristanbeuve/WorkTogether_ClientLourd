@@ -28,12 +28,20 @@ namespace WpfApp1.View
             this.DataContext = new ReservationViewModel();
         }
 
-
+        /// <summary>
+        /// cette fonction permet de déclencher la fonction RemoveReservation
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Supprimer_Click(object sender, RoutedEventArgs e)
         {
             ((ReservationViewModel)this.DataContext).RemoveReservation();
         }
-
+        /// <summary>
+        /// cette fonction permet de déclencher la fonction UpdateReservation
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Modifier_Click(object sender, RoutedEventArgs e)
         {
             ((ReservationViewModel)this.DataContext).UpdateReservation();

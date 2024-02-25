@@ -27,19 +27,31 @@ namespace WpfApp1.View
             this.DataContext = new UniteViewModel();
         }
 
-
+        /// <summary>
+        /// cette fonction permet de déclencher la fonction AddBaie
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Ajouter_Click(object sender, RoutedEventArgs e)
         {
             ((BaieViewModel)this.DataContext).AddBaie();
         }
 
-
+        /// <summary>
+        /// cette fonction permet de déclencher la fonction RemoveUnite
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Supprimer_Click(object sender, RoutedEventArgs e)
         {
 
             ((UniteViewModel)this.DataContext).RemoveUnite();
         }
-
+        /// <summary>
+        /// cette fonction permet de déclencher la fonction UpdateUnite
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Modifier_Click(object sender, RoutedEventArgs e)
         {
             ((UniteViewModel)this.DataContext).UpdateUnite();

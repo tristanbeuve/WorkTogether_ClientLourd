@@ -17,6 +17,7 @@ namespace WpfApp1.Windows
 {
     /// <summary>
     /// Logique d'interaction pour WindowLogin.xaml
+    /// Cette fenetre à pour but d'identifier l'utilisateur qui souhaiterais se connecter
     /// </summary>
     public partial class WindowLogin : Window
     {
@@ -25,12 +26,20 @@ namespace WpfApp1.Windows
             InitializeComponent();
             Log.Focus();
         }
-
+        /// <summary>
+        /// Déclenche l'annulation du login
+        /// </summary>
         private void CloseButton_Click(object sender, RoutedEventArgs e)
         {
             this.DialogResult = false;
             this.Close();
         }
+        /// <summary>
+        /// Vérifie dans la BDD si le password correspond bien à celui de l'identifient récuoérer grâce à la fonction AuthenticateUser
+        /// Si AuthenticateUser retourne false un message d'erreur apparait
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
             string useremail = txtUsername.Text;
@@ -50,7 +59,12 @@ namespace WpfApp1.Windows
                 MessageBox.Show("Nom d'utilisateur ou mot de passe incorrect.");
             }
         }
-
+        /// <summary>
+        /// cette fonction récupère l'objet user qui correspond à cette adresse email et comparre la variable password avec le mot de passe décrypter de la base de donnée qui correspond au user grâce au plus-in BCrypt.Net
+        /// </summary>
+        /// <param name="useremail">Correspond à l'email fournie par l'utilisateur</param>
+        /// <param name="password">Correspond au mot de passe fournie par l'utilisateur</param>
+        /// <returns></returns>
         private bool AuthenticateUser(string useremail, string password)
         {
 
