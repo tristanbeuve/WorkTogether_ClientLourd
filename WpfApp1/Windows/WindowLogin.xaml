@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfApp1.Windows"
         mc:Ignorable="d"
         Title="Connexion" MinHeight="250" MinWidth="400" MaxHeight="250" MaxWidth="400">
-    <Grid>
+    <Grid Style="{StaticResource AppBackgroundStyle}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />

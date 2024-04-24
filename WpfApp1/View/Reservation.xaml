@@ -33,7 +33,7 @@
             </DataGrid.Columns>
         </DataGrid>
 
-        <Button x:Name="Supprimer" Content="Supprimer" Click="Supprimer_Click"  MinWidth="100"  HorizontalAlignment="Center" MinHeight="50" Grid.Row="2" Grid.Column="1" Visibility="{Binding Path=User, Source={x:Static Application.Current}, Converter={StaticResource SharedUserRoleToVisibilityConverter}, ConverterParameter='ROLE_ADMIN'}"/>
-        <Button x:Name="Modifier" Content="Modifier" Click="Modifier_Click"  MinWidth="100"  HorizontalAlignment="Right"  MinHeight="50" Grid.Row="2" Grid.Column="1" Visibility="{Binding Path=User, Source={x:Static Application.Current}, Converter={StaticResource SharedUserRoleToVisibilityConverter}, ConverterParameter='ROLE_ADMIN'}"/>
+        <Button x:Name="Supprimer" Content="Supprimer" Click="Supprimer_Click"  MinWidth="100"  HorizontalAlignment="Center" MinHeight="50" Grid.Row="2" Grid.Column="1" Visibility="{Binding Path=User, Source={x:Static Application.Current}, Converter={StaticResource SharedUserRoleToVisibilityConverter}, ConverterParameter='ROLE_ADMIN'}" Style="{StaticResource ButtonStyle}"/>
+        <Button x:Name="Modifier" Content="Modifier" Click="Modifier_Click"  MinWidth="100"  HorizontalAlignment="Right"  MinHeight="50" Grid.Row="2" Grid.Column="1" Visibility="{Binding Path=User, Source={x:Static Application.Current}, Converter={StaticResource SharedUserRoleToVisibilityConverter}, ConverterParameter='ROLE_ADMIN'}" Style="{StaticResource ButtonStyle}"/>
     </Grid>
 </UserControl>

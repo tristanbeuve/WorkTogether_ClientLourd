@@ -1,0 +1,11 @@
+D:\Cours\IIA\BTS2\Cours\C#\Modules\ClassLibrary1\ClassLibrary1\bin\Debug\net8.0\Modules.deps.json
+D:\Cours\IIA\BTS2\Cours\C#\Modules\ClassLibrary1\ClassLibrary1\bin\Debug\net8.0\Modules.dll
+D:\Cours\IIA\BTS2\Cours\C#\Modules\ClassLibrary1\ClassLibrary1\bin\Debug\net8.0\Modules.pdb
+D:\Cours\IIA\BTS2\Cours\C#\Modules\ClassLibrary1\ClassLibrary1\obj\Debug\net8.0\Modules.GeneratedMSBuildEditorConfig.editorconfig
+D:\Cours\IIA\BTS2\Cours\C#\Modules\ClassLibrary1\ClassLibrary1\obj\Debug\net8.0\Modules.AssemblyInfoInputs.cache
+D:\Cours\IIA\BTS2\Cours\C#\Modules\ClassLibrary1\ClassLibrary1\obj\Debug\net8.0\Modules.AssemblyInfo.cs
+D:\Cours\IIA\BTS2\Cours\C#\Modules\ClassLibrary1\ClassLibrary1\obj\Debug\net8.0\Modules.csproj.CoreCompileInputs.cache
+D:\Cours\IIA\BTS2\Cours\C#\Modules\ClassLibrary1\ClassLibrary1\obj\Debug\net8.0\Modules.dll
+D:\Cours\IIA\BTS2\Cours\C#\Modules\ClassLibrary1\ClassLibrary1\obj\Debug\net8.0\refint\Modules.dll
+D:\Cours\IIA\BTS2\Cours\C#\Modules\ClassLibrary1\ClassLibrary1\obj\Debug\net8.0\Modules.pdb
+D:\Cours\IIA\BTS2\Cours\C#\Modules\ClassLibrary1\ClassLibrary1\obj\Debug\net8.0\ref\Modules.dll
