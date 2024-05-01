@@ -988,16 +988,6 @@
           }
         }
       },
-      "Modules/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "compile": {
-          "bin/placeholder/Modules.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Modules.dll": {}
-        }
-      },
       "WorkTogetherDBLib/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -2760,11 +2750,6 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Modules/1.0.0": {
-      "type": "project",
-      "path": "D:\\Cours\\IIA\\BTS2\\Cours\\C#\\Modules\\ClassLibrary1\\ClassLibrary1\\Modules.csproj",
-      "msbuildProject": "D:\\Cours\\IIA\\BTS2\\Cours\\C#\\Modules\\ClassLibrary1\\ClassLibrary1\\Modules.csproj"
-    },
     "WorkTogetherDBLib/1.0.0": {
       "type": "project",
       "path": "../WorkTogetherDBLib/WorkTogetherDBLib.csproj",
@@ -2774,7 +2759,6 @@
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
       "BCrypt.Net-Next >= 4.0.3",
-      "Modules >= 1.0.0",
       "Prism.Core >= 8.1.97",
       "WorkTogetherDBLib >= 1.0.0"
     ]
@@ -2808,9 +2792,6 @@
           "projectReferences": {
             "C:\\Users\\trist\\Documents\\PPE\\Projet\\WorkTogether_ClientLourd\\WorkTogetherWPF\\WorkTogetherDBLib\\WorkTogetherDBLib.csproj": {
               "projectPath": "C:\\Users\\trist\\Documents\\PPE\\Projet\\WorkTogether_ClientLourd\\WorkTogetherWPF\\WorkTogetherDBLib\\WorkTogetherDBLib.csproj"
-            },
-            "D:\\Cours\\IIA\\BTS2\\Cours\\C#\\Modules\\ClassLibrary1\\ClassLibrary1\\Modules.csproj": {
-              "projectPath": "D:\\Cours\\IIA\\BTS2\\Cours\\C#\\Modules\\ClassLibrary1\\ClassLibrary1\\Modules.csproj"
             }
           }
         }

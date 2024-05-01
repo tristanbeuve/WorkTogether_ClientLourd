@@ -89,32 +89,32 @@ namespace WpfApp1.ViewModels
         {
             using (PpeContext context = new())
             {
-                Baie Baie = new Baie();
-                Baie.NbrEmplacement = 42;
-                Baie.Status = false;
-                context.Baies.Add(Baie);
-                this._Baie.Add(Baie);
+                Baie baie = new Baie();
+                baie.NbrEmplacement = 42;
+                baie.Status = false;
+                context.Baies.Add(baie);
+                this._Baie.Add(baie);
                 context.SaveChanges();
 
                 for (int i = 0; i < 42; i++)
                 {
-                    WorkTogetherDBLib.Class.Unite Unites = (WorkTogetherDBLib.Class.Unite)Baie.Unites;
-                    Unites.IdentifiantBaieId = Baie.Id;
-                    Unites.IdentifiantTypeUniteId = 1;
-                    Unites.Status = false;
-                    Unites.Numero = "111";
-                    context.Unites.Add(Unites);
-
+                    WorkTogetherDBLib.Class.Unite unite = new WorkTogetherDBLib.Class.Unite();
+                    unite.IdentifiantBaieId = baie.Id;
+                    unite.IdentifiantTypeUniteId = 1;
+                    unite.Status = false;
+                    unite.Numero = baie.Id+"-"+(i+1);
+                    context.Unites.Add(unite);
                 }
                 context.SaveChanges();
             }
         }
-        /// <summary>
-        /// définie si une baie à été séléctionné au préalable
-        /// </summary>
-        /// <param name="parameter"></param>
-        /// <returns></returns>
-        internal bool CanAddBaie(object? parameter = null) => this.SelectedBaie != null;
+
+    /// <summary>
+    /// définie si une baie à été séléctionné au préalable
+    /// </summary>
+    /// <param name="parameter"></param>
+    /// <returns></returns>
+    internal bool CanAddBaie(object? parameter = null) => this.SelectedBaie != null;
 
         /// <summary>
         /// définition de la commande RemoveBaie

@@ -101,9 +101,6 @@
             "projectReferences": {
               "C:\\Users\\trist\\Documents\\PPE\\Projet\\WorkTogether_ClientLourd\\WorkTogetherWPF\\WorkTogetherDBLib\\WorkTogetherDBLib.csproj": {
                 "projectPath": "C:\\Users\\trist\\Documents\\PPE\\Projet\\WorkTogether_ClientLourd\\WorkTogetherWPF\\WorkTogetherDBLib\\WorkTogetherDBLib.csproj"
-              },
-              "D:\\Cours\\IIA\\BTS2\\Cours\\C#\\Modules\\ClassLibrary1\\ClassLibrary1\\Modules.csproj": {
-                "projectPath": "D:\\Cours\\IIA\\BTS2\\Cours\\C#\\Modules\\ClassLibrary1\\ClassLibrary1\\Modules.csproj"
               }
             }
           }
@@ -144,61 +141,6 @@
             },
             "Microsoft.WindowsDesktop.App.WPF": {
               "privateAssets": "none"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "D:\\Cours\\IIA\\BTS2\\Cours\\C#\\Modules\\ClassLibrary1\\ClassLibrary1\\Modules.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\Cours\\IIA\\BTS2\\Cours\\C#\\Modules\\ClassLibrary1\\ClassLibrary1\\Modules.csproj",
-        "projectName": "Modules",
-        "projectPath": "D:\\Cours\\IIA\\BTS2\\Cours\\C#\\Modules\\ClassLibrary1\\ClassLibrary1\\Modules.csproj",
-        "packagesPath": "C:\\Users\\trist\\.nuget\\packages\\",
-        "outputPath": "D:\\Cours\\IIA\\BTS2\\Cours\\C#\\Modules\\ClassLibrary1\\ClassLibrary1\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\trist\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net8.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
-            "projectReferences": {}
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"

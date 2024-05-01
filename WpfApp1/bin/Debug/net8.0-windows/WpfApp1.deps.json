@@ -9,9 +9,9 @@
       "WpfApp1/1.0.0": {
         "dependencies": {
           "BCrypt.Net-Next": "4.0.3",
-          "Modules": "1.0.0",
           "Prism.Core": "8.1.97",
-          "WorkTogetherDBLib": "1.0.0"
+          "WorkTogetherDBLib": "1.0.0",
+          "Modules": "1.0.0.0"
         },
         "runtime": {
           "WpfApp1.dll": {}
@@ -494,11 +494,6 @@
           "System.Drawing.Common": "6.0.0"
         }
       },
-      "Modules/1.0.0": {
-        "runtime": {
-          "Modules.dll": {}
-        }
-      },
       "WorkTogetherDBLib/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "8.0.0",
@@ -506,6 +501,14 @@
         },
         "runtime": {
           "WorkTogetherDBLib.dll": {}
+        }
+      },
+      "Modules/1.0.0.0": {
+        "runtime": {
+          "Modules.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
@@ -908,13 +911,13 @@
       "path": "system.windows.extensions/6.0.0",
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
     },
-    "Modules/1.0.0": {
+    "WorkTogetherDBLib/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "WorkTogetherDBLib/1.0.0": {
-      "type": "project",
+    "Modules/1.0.0.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

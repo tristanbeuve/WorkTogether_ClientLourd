@@ -15,11 +15,16 @@
 
   <ItemGroup>
     <ProjectReference Include="..\WorkTogetherDBLib\WorkTogetherDBLib.csproj" />
-    <ProjectReference Include="D:\Cours\IIA\BTS2\Cours\C#\Modules\ClassLibrary1\ClassLibrary1\Modules.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Convertor\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Modules">
+      <HintPath>..\Modules\ClassLibrary1\ClassLibrary1\obj\Debug\net8.0\Modules.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
