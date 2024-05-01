@@ -84,3 +84,5 @@ C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\Wpf
 C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WpfApp1\obj\Debug\net8.0-windows\Windows\Forms\UpdateFormUser.baml
 C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WpfApp1\obj\Debug\net8.0-windows\Windows\Forms\UpdateFormBaie.g.cs
 C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WpfApp1\obj\Debug\net8.0-windows\Windows\Forms\UpdateFormBaie.baml
+C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WpfApp1\obj\Debug\net8.0-windows\Windows\Forms\UpdateFormUnite.g.cs
+C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WpfApp1\obj\Debug\net8.0-windows\Windows\Forms\UpdateFormUnite.baml

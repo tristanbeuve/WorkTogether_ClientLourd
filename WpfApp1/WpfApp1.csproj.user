@@ -28,6 +28,9 @@
     <Compile Update="Windows\Forms\UpdateFormBaie.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Windows\Forms\UpdateFormUnite.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Windows\Forms\UpdateFormUser.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -61,6 +64,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Windows\Forms\UpdateFormBaie.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\Forms\UpdateFormUnite.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Windows\Forms\UpdateFormUser.xaml">

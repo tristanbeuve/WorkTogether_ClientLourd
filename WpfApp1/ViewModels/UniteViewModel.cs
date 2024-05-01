@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using WorkTogetherDBLib.Class;
+using WpfApp1.Windows.Forms;
 
 namespace WpfApp1.ViewModels
 {
@@ -105,11 +106,18 @@ namespace WpfApp1.ViewModels
             {
                 if (SelectedUnites != null)
                 {
-                    context.Unites.Find(SelectedUnites.Id).IdentifiantTypeUniteId = SelectedUnites.IdentifiantTypeUniteId;
-                    context.Unites.Find(SelectedUnites.Id).IdentifiantReservationId = SelectedUnites.IdentifiantReservationId;
-                    context.Unites.Find(SelectedUnites.Id).IdentifiantBaieId = SelectedUnites.IdentifiantBaieId;
-                    context.Unites.Find(SelectedUnites.Id).Status = SelectedUnites.Status;
-                    context.SaveChanges();
+                    UpdateFormUnite form = new UpdateFormUnite();
+                    form.Status = SelectedUnites.Status;
+                    form.IdentifiantTypeUniteId = SelectedUnites.IdentifiantTypeUniteId;
+                    form.ShowDialog();
+                    if (form.DialogResult == true)
+                    {
+                        Unite Unite = SelectedUnites;
+                        Unite.Status = form.Status;
+                        Unite.IdentifiantTypeUniteId = form.IdentifiantTypeUniteId;
+                        context.Unites.Update(Unite);
+                        context.SaveChanges();
+                    }
                 }
                 else
                 {
