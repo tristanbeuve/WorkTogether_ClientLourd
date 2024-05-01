@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using WorkTogetherDBLib.Class;
+using WpfApp1.Windows.Forms;
 
 namespace WpfApp1.ViewModels
 {
@@ -115,10 +116,41 @@ namespace WpfApp1.ViewModels
             {
                 if (SelectedReservation != null)
                 {
-                    context.Reservations.Find(SelectedReservation.Id).Quantity = SelectedReservation.Quantity;
-                    context.Reservations.Find(SelectedReservation.Id).IdentifiantAbonnementId = SelectedReservation.IdentifiantAbonnementId;
-                    context.Reservations.Find(SelectedReservation.Id).RenouvellementId = SelectedReservation.RenouvellementId;
-                    context.SaveChanges();
+                    UpdateFormReservation form = new UpdateFormReservation();
+                    form.DateDeb = SelectedReservation.DateDeb;
+                    form.DateEnd = SelectedReservation.DateEnd;
+                    form.RenAuto = SelectedReservation.RenAuto;
+                    form.Quantity = SelectedReservation.Quantity;
+                    form.Delaie = SelectedReservation.Delaie;
+                    form.ShowDialog();
+                    if (form.DialogResult == true)
+                    {
+                        if (form.DateDeb>form.DateEnd)
+                        {
+                            MessageBox.Show("Une ou plusieurs date(s) n'est/sont pas valide(s)");
+                        }
+                        if(SelectedReservation.Delaie == true)
+                        {
+                            Reservation ReservationDelaie = SelectedReservation;
+                            ReservationDelaie.DateDeb = form.DateDeb;
+                            ReservationDelaie.DateEnd = form.DateEnd;
+                            ReservationDelaie.RenAuto = form.RenAuto;
+                            ReservationDelaie.Quantity = form.Quantity;
+                            context.Reservations.Update(ReservationDelaie);
+                        }
+                        else
+                        {
+                            Reservation Reservation = SelectedReservation;
+                            Reservation.DateDeb = form.DateDeb;
+                            Reservation.DateEnd = form.DateEnd;
+                            Reservation.RenAuto = form.RenAuto;
+                            Reservation.Quantity = form.Quantity;
+                            Reservation.Delaie = form.Delaie;
+                            context.Reservations.Update(Reservation);
+                            
+                        }
+                        context.SaveChanges();
+                    }
                 }
                 else
                 {
