@@ -22,7 +22,13 @@
     <Compile Update="View\Users.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Windows\FormUser.xaml.cs">
+    <Compile Update="Windows\Forms\FormUser.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\Forms\UpdateFormBaie.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\Forms\UpdateFormUser.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Windows\WindowLogin.xaml.cs">
@@ -51,7 +57,13 @@
     <Page Update="View\Users.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Windows\FormUser.xaml">
+    <Page Update="Windows\Forms\FormUser.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\Forms\UpdateFormBaie.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\Forms\UpdateFormUser.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Windows\WindowLogin.xaml">

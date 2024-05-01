@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WpfApp1\App.xaml
-91676025082
+11-1215390487
 
-22462536645
+24187164579
 2301495729925
-MainWindow.xaml;Styles\Style.xaml;View\Baies.xaml;View\Home.xaml;View\Reservation.xaml;View\Unite.xaml;View\Users.xaml;Windows\FormUser.xaml;Windows\WindowLogin.xaml;
+MainWindow.xaml;Styles\Style.xaml;View\Baies.xaml;View\Home.xaml;View\Reservation.xaml;View\Unite.xaml;View\Users.xaml;Windows\Forms\FormUser.xaml;Windows\Forms\UpdateFormBaie.xaml;Windows\Forms\UpdateFormUser.xaml;Windows\WindowLogin.xaml;
 
-False
+True
 

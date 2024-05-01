@@ -78,5 +78,9 @@ C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\Wpf
 C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WpfApp1\obj\Debug\net8.0-windows\View\Users.g.cs
 C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WpfApp1\obj\Debug\net8.0-windows\View\Users.baml
 C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WpfApp1\bin\Debug\net8.0-windows\BCrypt.Net-Next.dll
-C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WpfApp1\obj\Debug\net8.0-windows\Windows\FormUser.g.cs
-C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WpfApp1\obj\Debug\net8.0-windows\Windows\FormUser.baml
+C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WpfApp1\obj\Debug\net8.0-windows\Windows\Forms\FormUser.g.cs
+C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WpfApp1\obj\Debug\net8.0-windows\Windows\Forms\UpdateFormUser.g.cs
+C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WpfApp1\obj\Debug\net8.0-windows\Windows\Forms\FormUser.baml
+C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WpfApp1\obj\Debug\net8.0-windows\Windows\Forms\UpdateFormUser.baml
+C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WpfApp1\obj\Debug\net8.0-windows\Windows\Forms\UpdateFormBaie.g.cs
+C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WpfApp1\obj\Debug\net8.0-windows\Windows\Forms\UpdateFormBaie.baml

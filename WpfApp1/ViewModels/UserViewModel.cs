@@ -150,10 +150,20 @@ namespace WpfApp1.ViewModels
             {
                 if (SelectedUser != null)
                 {
-                    context.Users.Find(SelectedUser.Id).Email = SelectedUser.Email;
-                    context.Users.Find(SelectedUser.Id).Nom = SelectedUser.Nom;
-                    context.Users.Find(SelectedUser.Id).Prenom = SelectedUser.Prenom;
-                    context.SaveChanges();
+                    UpdateFormUser form = new UpdateFormUser();
+                    form.Email = SelectedUser.Email;
+                    form.Nom = SelectedUser.Nom;
+                    form.Prenom = SelectedUser.Prenom;
+                    form.ShowDialog();
+                    if (form.DialogResult == true)
+                    {
+                        User User = SelectedUser;
+                        User.Email = form.Email;
+                        User.Prenom = form.Prenom;
+                        User.Nom = form.Nom;
+                        context.Users.Update(User);
+                        context.SaveChanges();
+                    }
                 }
                 else
                 {

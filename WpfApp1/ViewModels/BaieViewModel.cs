@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using System.Windows;
 using WorkTogetherDBLib.Class;
 using WpfApp1.View;
+using WpfApp1.Windows;
+using WpfApp1.Windows.Forms;
 
 namespace WpfApp1.ViewModels
 {
@@ -124,12 +126,19 @@ namespace WpfApp1.ViewModels
         {
             using (PpeContext context = new())
             {
-                if (SelectedBaie != null && SelectedBaie.Unites.All(u => u.IdentifiantReservationId == null))
+                if (SelectedBaie != null)
                 {
-                    context.Unites.RemoveRange(SelectedBaie.Unites);
-                    context.Baies.Remove(SelectedBaie);
-                    Baie.Remove(SelectedBaie);
-                    context.SaveChanges();
+                    if (SelectedBaie.Unites.All(u => u.IdentifiantReservationId == null))
+                    {
+                        context.Unites.RemoveRange(SelectedBaie.Unites);
+                        context.Baies.Remove(SelectedBaie);
+                        Baie.Remove(SelectedBaie);
+                        context.SaveChanges();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Erreur ! Vous ne pouvez pas supprimer une ou plusieurs unité(s) réservé(s)");
+                    }
                 }
                 else
                 {
@@ -156,9 +165,18 @@ namespace WpfApp1.ViewModels
             {
                 if (SelectedBaie != null)
                 {
-                    context.Baies.Find(SelectedBaie.Id).NbrEmplacement = SelectedBaie.NbrEmplacement;
-                    context.Baies.Find(SelectedBaie.Id).Status = SelectedBaie.Status;
-                    context.SaveChanges();
+                    UpdateFormBaie form = new UpdateFormBaie();
+                    form.Status = SelectedBaie.Status;
+                    form.NbrEmplacement = SelectedBaie.NbrEmplacement;
+                    form.ShowDialog();
+                    if (form.DialogResult == true)
+                    {
+                        Baie Baie = SelectedBaie;
+                        Baie.Status = form.Status;
+                        Baie.NbrEmplacement = form.NbrEmplacement;
+                        context.Baies.Update(Baie);
+                        context.SaveChanges();
+                    }
                 }
                 else
                 {
