@@ -93,16 +93,17 @@ namespace WpfApp1.ViewModels
                         int nbremplacement = Reservations.IdentifiantAbonnement.NbrEmplacement;
                         if (SelectedReservation.IdentifiantAbonnement.NbrEmplacement == nbremplacement)
                         {
-                            
+                               
                         }
                     };**/
                     context.Reservations.Remove(Reservation);
                     this._Reservation.Remove(Reservation);
+                    
                     context.SaveChanges();
                 }
                 else
                 {
-                    MessageBox.Show("Erreur veuillez selectionner un champs");
+                    MessageBox.Show("Erreur : veuillez selectionner un champs");
                 }
             }
         }
@@ -135,7 +136,7 @@ namespace WpfApp1.ViewModels
                     {
                         if (form.DateDeb>form.DateEnd)
                         {
-                            MessageBox.Show("Une ou plusieurs date(s) n'est/sont pas valide(s)");
+                            MessageBox.Show("Erreur : Une ou plusieurs date(s) n'est/sont pas valide(s)");
                         }
                         if(SelectedReservation.Delaie == true)
                         {
@@ -162,7 +163,7 @@ namespace WpfApp1.ViewModels
                 }
                 else
                 {
-                    MessageBox.Show("Erreur veuillez selectionner un champs valide");
+                    MessageBox.Show("Erreur : veuillez selectionner un champs valide");
                 }
             }
         }

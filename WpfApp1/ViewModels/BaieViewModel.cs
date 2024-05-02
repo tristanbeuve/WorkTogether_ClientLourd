@@ -137,12 +137,12 @@ namespace WpfApp1.ViewModels
                     }
                     else
                     {
-                        MessageBox.Show("Erreur ! Vous ne pouvez pas supprimer une ou plusieurs unité(s) réservé(s)");
+                        MessageBox.Show("Erreur : Vous ne pouvez pas supprimer une ou plusieurs unité(s) réservé(s)");
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Erreur veuillez selectionner un champs");
+                    MessageBox.Show("Erreur : veuillez selectionner un champs");
                 }
 
                 context.SaveChanges();

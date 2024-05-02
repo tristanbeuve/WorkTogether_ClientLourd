@@ -129,7 +129,7 @@ namespace WpfApp1.ViewModels
                 }
                 else
                 {
-                    MessageBox.Show("Erreur veuillez selectionner un champs");
+                    MessageBox.Show("Erreur : veuillez selectionner un champs");
                 }
             }
         }
