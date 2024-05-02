@@ -88,6 +88,14 @@ namespace WpfApp1.ViewModels
                 if (SelectedReservation != null)
                 {
                     Reservation? Reservation = SelectedReservation;
+                    /**User client = SelectedReservation.Customer;
+                    foreach (Reservation Reservations in client.Reservations) {
+                        int nbremplacement = Reservations.IdentifiantAbonnement.NbrEmplacement;
+                        if (SelectedReservation.IdentifiantAbonnement.NbrEmplacement == nbremplacement)
+                        {
+                            
+                        }
+                    };**/
                     context.Reservations.Remove(Reservation);
                     this._Reservation.Remove(Reservation);
                     context.SaveChanges();

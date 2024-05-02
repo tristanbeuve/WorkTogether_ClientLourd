@@ -1,4 +1,5 @@
-﻿using Modules;
+﻿using Microsoft.EntityFrameworkCore;
+using Modules;
 using Prism.Commands;
 using System;
 using System.Collections.Generic;
@@ -74,7 +75,7 @@ namespace WpfApp1.ViewModels
 
             using (PpeContext context = new())
             {
-                this.Users = new ObservableCollection<User>(context.Users);
+                this.Users = new ObservableCollection<User>(context.Users.Include(u => u.Reservations));
             }
         }
         #endregion
@@ -124,10 +125,20 @@ namespace WpfApp1.ViewModels
             {
                 if (SelectedUser != null)
                 {
+                    //User user = context.Users.Include(u => u.Reservations).SingleOrDefault(u => u.Id == SelectedUser.Id);
                     User? User = SelectedUser;
-                    context.Users.Remove(User);
-                    this.Users.Remove(User);
-                    context.SaveChanges();
+                    if (User.Reservations.Any())
+                    {
+                        MessageBox.Show("Erreur ! Il semblerait que cet utilisateur possède des réservations");
+                        
+                    }
+                    else
+                    {
+
+                        context.Users.Remove(User);
+                        this.Users.Remove(User);
+                        context.SaveChanges();
+                    }
                 }
                 else
                 {
