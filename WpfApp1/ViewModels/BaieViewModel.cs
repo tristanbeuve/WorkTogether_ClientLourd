@@ -13,6 +13,7 @@ using WpfApp1.View;
 using WpfApp1.Windows;
 using WpfApp1.Windows.Forms;
 
+
 namespace WpfApp1.ViewModels
 {
     internal class BaieViewModel : ObservableObject
