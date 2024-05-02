@@ -22,19 +22,19 @@
     <Compile Update="View\Users.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="ViewModels\Forms\FormUser.xaml.cs">
+    <Compile Update="Forms\FormUser.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="ViewModels\Forms\UpdateFormBaie.xaml.cs">
+    <Compile Update="Forms\UpdateFormBaie.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="ViewModels\Forms\UpdateFormReservation.xaml.cs">
+    <Compile Update="Forms\UpdateFormReservation.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="ViewModels\Forms\UpdateFormUnite.xaml.cs">
+    <Compile Update="Forms\UpdateFormUnite.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="ViewModels\Forms\UpdateFormUser.xaml.cs">
+    <Compile Update="Forms\UpdateFormUser.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Windows\WindowLogin.xaml.cs">
@@ -63,19 +63,19 @@
     <Page Update="View\Users.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="ViewModels\Forms\FormUser.xaml">
+    <Page Update="Forms\FormUser.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="ViewModels\Forms\UpdateFormBaie.xaml">
+    <Page Update="Forms\UpdateFormBaie.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="ViewModels\Forms\UpdateFormReservation.xaml">
+    <Page Update="Forms\UpdateFormReservation.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="ViewModels\Forms\UpdateFormUnite.xaml">
+    <Page Update="Forms\UpdateFormUnite.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="ViewModels\Forms\UpdateFormUser.xaml">
+    <Page Update="Forms\UpdateFormUser.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Windows\WindowLogin.xaml">
