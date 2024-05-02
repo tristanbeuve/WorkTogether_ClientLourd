@@ -128,7 +128,7 @@ namespace WpfApp1.ViewModels
             {
                 if (SelectedBaie != null)
                 {
-                    if (SelectedBaie.Unites.All(u => u.IdentifiantReservationId == null))
+                    if (SelectedBaie.Unites.All(u => u.Status == false))
                     {
                         context.Unites.RemoveRange(SelectedBaie.Unites);
                         context.Baies.Remove(SelectedBaie);
