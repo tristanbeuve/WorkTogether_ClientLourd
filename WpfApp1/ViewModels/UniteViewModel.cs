@@ -81,16 +81,20 @@ namespace WpfApp1.ViewModels
             {
                 if (SelectedUnites != null)
                 {
-                    Unite? Unite = SelectedUnites;
-                    Unite.IdentifiantBaie.NbrEmplacement -= 1;
-                    context.Update(Unite.IdentifiantBaie);
-                    context.Unites.Remove(Unite);
-                    this._Unites.Remove(Unite);
-                    context.SaveChanges();
+                    if(SelectedUnites.Status != true)
+                    {
+                        Unite? Unite = SelectedUnites;
+                        Unite.IdentifiantBaie.NbrEmplacement -= 1;
+                        context.Update(Unite.IdentifiantBaie);
+                        context.Unites.Remove(Unite);
+                        this._Unites.Remove(Unite);
+                        context.SaveChanges();
+                    }
+                    else { MessageBox.Show("Erreur : l'unité est réservé. Vous ne pouvez pas la supprimer"); }
                 }
                 else
                 {
-                    MessageBox.Show("Erreur veuillez selectionner un champs");
+                    MessageBox.Show("Erreur : veuillez selectionner un champs");
                 }
 
             }
