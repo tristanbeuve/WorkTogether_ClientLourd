@@ -1,4 +1,5 @@
-﻿using Modules;
+﻿using Microsoft.EntityFrameworkCore;
+using Modules;
 using Prism.Commands;
 using System;
 using System.Collections.Generic;
@@ -64,6 +65,7 @@ namespace WpfApp1.ViewModels
             using (PpeContext context = new())
             {
                 this.Unites = new ObservableCollection<Unite>(context.Unites);
+                this.Unites = new ObservableCollection<Unite>(context.Unites.Include(u => u.IdentifiantBaie));
             }
         }
         #endregion
@@ -80,6 +82,8 @@ namespace WpfApp1.ViewModels
                 if (SelectedUnites != null)
                 {
                     Unite? Unite = SelectedUnites;
+                    Unite.IdentifiantBaie.NbrEmplacement -= 1;
+                    context.Update(Unite.IdentifiantBaie);
                     context.Unites.Remove(Unite);
                     this._Unites.Remove(Unite);
                     context.SaveChanges();

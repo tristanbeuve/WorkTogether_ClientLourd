@@ -73,7 +73,7 @@ namespace WpfApp1.ViewModels
         {
             CommandAddBaie = new DelegateCommand<object>(AddBaie, CanAddBaie).ObservesProperty(() => this.SelectedBaie);
             CommandRemoveBaie = new DelegateCommand<object>(RemoveBaie, CanRemoveBaie).ObservesProperty(() => this.SelectedBaie);
-            CommandUpdateBaie = new DelegateCommand<object>(RemoveBaie, CanRemoveBaie).ObservesProperty(() => this.SelectedBaie);
+            CommandUpdateBaie = new DelegateCommand<object>(UpdateBaie, CanUpdateBaie).ObservesProperty(() => this.SelectedBaie);
 
             using (PpeContext context = new())
             {
@@ -165,11 +165,12 @@ namespace WpfApp1.ViewModels
             {
                 if (SelectedBaie != null)
                 {
+                    int nbrEmplacement = SelectedBaie.NbrEmplacement;
                     UpdateFormBaie form = new UpdateFormBaie();
                     form.Status = SelectedBaie.Status;
                     form.NbrEmplacement = SelectedBaie.NbrEmplacement;
                     form.ShowDialog();
-                    if (form.DialogResult == true)
+                    if (form.DialogResult == true && nbrEmplacement>form.NbrEmplacement)
                     {
                         Baie Baie = SelectedBaie;
                         Baie.Status = form.Status;
@@ -177,10 +178,14 @@ namespace WpfApp1.ViewModels
                         context.Baies.Update(Baie);
                         context.SaveChanges();
                     }
+                    else
+                    {
+                        MessageBox.Show("Erreur : le nombre d'emplacement saisie ne peut pas être enregistré");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Erreur veuillez selectionner un champs");
+                    MessageBox.Show("Erreur : veuillez selectionner un champs");
                 }
             }
         }
