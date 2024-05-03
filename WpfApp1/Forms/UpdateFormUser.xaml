@@ -1,0 +1,44 @@
+﻿<Window x:Class="WpfApp1.Windows.UpdateFormUser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1.Windows"
+        mc:Ignorable="d"
+        Title="Modifier un Utilisateur" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+
+        <Image Width="auto" Source='C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WpfApp1\img\logo.png' Grid.Column="1" Grid.Row="0" VerticalAlignment="Top"/>
+        <Label Content="WorkTogether" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalContentAlignment="Center" FontSize="20"/>
+
+        <Label Content="Nom" Grid.Row="2" Grid.Column="0"/>
+        <TextBox  Text="{Binding Nom}" Grid.Row="2" Grid.Column="1" Margin="5"></TextBox>
+
+        <Label Content="Prénom" Grid.Row="3" Grid.Column="0"/>
+        <TextBox  Text="{Binding Prenom}" Grid.Row="3" Grid.Column="1" Margin="5"></TextBox>
+
+        <Label Content="Email" Grid.Row="4" Grid.Column="0"/>
+        <TextBox Text="{Binding Email}" Grid.Row="4" Grid.Column="1" Margin="5"></TextBox>
+
+        <Button x:Name="valider" Content="Valider" Click="Valid_Click" Grid.Row="7" Grid.Column="3" Style="{StaticResource ButtonStyle}"/>
+        <Button x:Name="annuler" Content="Annuler" Click="Cancel_Click" Grid.Row="8" Grid.Column="3" Style="{StaticResource ButtonStyle}"/>
+    </Grid>
+</Window>
