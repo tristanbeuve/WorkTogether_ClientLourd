@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup />
+  <PropertyGroup>
+    <_LastSelectedProfileId>C:\Users\JuryEpreuve.WORKTOGETHER\source\repos\WorkTogether_ClientLourd\WpfApp1\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
   <ItemGroup>
     <ApplicationDefinition Update="App.xaml">
       <SubType>Designer</SubType>
@@ -22,19 +24,19 @@
     <Compile Update="View\Users.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Forms\FormUser.xaml.cs">
+    <Compile Update="Windows\Forms\FormUser.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Forms\UpdateFormBaie.xaml.cs">
+    <Compile Update="Windows\Forms\UpdateFormBaie.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Forms\UpdateFormReservation.xaml.cs">
+    <Compile Update="Windows\Forms\UpdateFormReservation.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Forms\UpdateFormUnite.xaml.cs">
+    <Compile Update="Windows\Forms\UpdateFormUnite.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Forms\UpdateFormUser.xaml.cs">
+    <Compile Update="Windows\Forms\UpdateFormUser.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Windows\WindowLogin.xaml.cs">
@@ -63,19 +65,19 @@
     <Page Update="View\Users.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Forms\FormUser.xaml">
+    <Page Update="Windows\Forms\FormUser.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Forms\UpdateFormBaie.xaml">
+    <Page Update="Windows\Forms\UpdateFormBaie.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Forms\UpdateFormReservation.xaml">
+    <Page Update="Windows\Forms\UpdateFormReservation.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Forms\UpdateFormUnite.xaml">
+    <Page Update="Windows\Forms\UpdateFormUnite.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Forms\UpdateFormUser.xaml">
+    <Page Update="Windows\Forms\UpdateFormUser.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Windows\WindowLogin.xaml">

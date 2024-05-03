@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfApp1" xmlns:views="clr-namespace:WpfApp1.View"
         mc:Ignorable="d"
         Title="WorkTogether" Height="450" Width="800" WindowState="Maximized">
-    <Grid Margin="50" ShowGridLines="True">
+    <Grid Margin="50" ShowGridLines="False">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="150" />
             <ColumnDefinition Width="2*" />

@@ -1,0 +1,52 @@
+﻿<Window x:Class="WpfApp1.Windows.Forms.UpdateFormReservation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1.Windows.Forms"
+        mc:Ignorable="d"
+        Title="Modifier Réservation" Height="500" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+
+        <Image Width="auto" Source='C:\Users\JuryEpreuve.WORKTOGETHER\source\repos\WorkTogether_ClientLourd\WpfApp1\img\logo.png' Grid.Column="1" Grid.Row="0" VerticalAlignment="Top"/>
+        <Label Content="WorkTogether" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalContentAlignment="Center" FontSize="20"/>
+
+        <Label Content="DateDeb" Grid.Row="3" Grid.Column="0"/>
+        <TextBox  Text="{Binding DateDeb}" Grid.Row="3" Grid.Column="1" Margin="5"></TextBox>
+
+        <Label Content="DateEnd" Grid.Row="4" Grid.Column="0"/>
+        <TextBox  Text="{Binding DateEnd}" Grid.Row="4" Grid.Column="1" Margin="5"></TextBox>
+
+        <Label Content="RenAuto" Grid.Row="5" Grid.Column="0"/>
+        <TextBox  Text="{Binding RenAuto}" Grid.Row="5" Grid.Column="1" Margin="5"></TextBox>
+
+        <Label Content="Quantity" Grid.Row="6" Grid.Column="0"/>
+        <TextBox  Text="{Binding Quantity}" Grid.Row="6" Grid.Column="1" Margin="5"></TextBox>
+
+        <Label Content="Delaie" Grid.Row="7" Grid.Column="0"/>
+        <TextBox  Text="{Binding Delaie}" Grid.Row="7" Grid.Column="1" Margin="5"></TextBox>
+
+
+        <Button x:Name="valider" Content="Valider" Click="valider_Click" Grid.Row="8" Grid.Column="3" Style="{StaticResource ButtonStyle}"/>
+        <Button x:Name="annuler" Content="Annuler" Click="Cancel_Click" Grid.Row="9" Grid.Column="3" Style="{StaticResource ButtonStyle}"/>
+    </Grid>
+</Window>
