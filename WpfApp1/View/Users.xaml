@@ -19,7 +19,7 @@
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
 
-        <Image Width="auto" Source='C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WpfApp1\img\logo.png' Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center"/>
+        <Image Width="auto" Source='C:\Users\JuryEpreuve.WORKTOGETHER\source\repos\WorkTogether_ClientLourd\WpfApp1\img\logo.png' Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center"/>
 
         <Label Grid.Column="1"  Grid.Row="0" Content="Utilisateurs" HorizontalAlignment="Center" FontWeight="Bold" FontSize="75"/>
 

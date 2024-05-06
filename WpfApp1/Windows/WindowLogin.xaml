@@ -23,7 +23,7 @@
         </Grid.ColumnDefinitions>
 
 
-        <Image MaxHeight="100" Source='C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WpfApp1\img\logo.png' Grid.Column="1" Grid.Row="0" />
+        <Image MaxHeight="100" Source='C:\Users\JuryEpreuve.WORKTOGETHER\source\repos\WorkTogether_ClientLourd\WpfApp1\img\logo.png' Grid.Column="1" Grid.Row="0" />
 
         
         <TextBlock Grid.Column="1" Grid.Row="1" Text="WorkTogether" HorizontalAlignment="Center" VerticalAlignment="Center" />
