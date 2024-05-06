@@ -9,6 +9,12 @@ public partial class Baie
     /// id de la baie
     /// </summary>
     public int Id { get; set; }
+
+    /// <summary>
+    /// status d'occupation de la baie
+    /// </summary>
+    public bool Numero { get; set; }
+
     /// <summary>
     /// nombre d'emplacement que contient la baie
     /// </summary>

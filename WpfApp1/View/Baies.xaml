@@ -26,6 +26,7 @@
         <DataGrid ItemsSource="{Binding Baie}" SelectedItem="{Binding SelectedBaie}" AutoGenerateColumns="False" Name="DatagridBaie" Grid.Row="1" Grid.Column="1" IsReadOnly="{Binding Path=User, Source={x:Static Application.Current}, Converter={StaticResource SharedObjectToisReadOnlyConverter}, ConverterParameter='ROLE_ADMIN'}" SelectionMode="Single">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Identifiant :" Binding="{Binding Id}" Width="*"/>
+                <DataGridTextColumn Header="Numéro :" Binding="{Binding Numero}" Width="*"/>
                 <DataGridTextColumn Header="Nombre d'unités :" Binding="{Binding NbrEmplacement}" Width="*"/>
                 <DataGridTextColumn Header="Statut :" Binding="{Binding Status}" Width="*"/>
             </DataGrid.Columns>

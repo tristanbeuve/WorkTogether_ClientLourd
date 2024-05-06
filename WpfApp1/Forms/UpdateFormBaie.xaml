@@ -28,11 +28,14 @@
         <Image Width="auto" Source='C:\Users\trist\Documents\PPE\Projet\WorkTogether_ClientLourd\WorkTogetherWPF\WpfApp1\img\logo.png' Grid.Column="1" Grid.Row="0" VerticalAlignment="Top"/>
         <Label Content="WorkTogether" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalContentAlignment="Center" FontSize="20"/>
 
-        <Label Content="NbrEmplacement" Grid.Row="3" Grid.Column="0"/>
-        <TextBox  Text="{Binding NbrEmplacement}" Grid.Row="3" Grid.Column="1" Margin="5"></TextBox>
+        <Label Content="Status" Grid.Row="3" Grid.Column="0"/>
+        <TextBox  Text="{Binding Numero}" Grid.Row="3" Grid.Column="1" Margin="5"></TextBox>
+        
+        <Label Content="NbrEmplacement" Grid.Row="4" Grid.Column="0"/>
+        <TextBox  Text="{Binding NbrEmplacement}" Grid.Row="4" Grid.Column="1" Margin="5"></TextBox>
 
-        <Label Content="Status" Grid.Row="4" Grid.Column="0"/>
-        <TextBox  Text="{Binding Status}" Grid.Row="4" Grid.Column="1" Margin="5"></TextBox>
+        <Label Content="Status" Grid.Row="5" Grid.Column="0"/>
+        <TextBox  Text="{Binding Status}" Grid.Row="5" Grid.Column="1" Margin="5"></TextBox>
 
         <Button x:Name="valider" Content="Valider" Click="valider_Click" Grid.Row="5" Grid.Column="3" Style="{StaticResource ButtonStyle}"/>
         <Button x:Name="annuler" Content="Annuler" Click="Cancel_Click" Grid.Row="7" Grid.Column="3" Style="{StaticResource ButtonStyle}"/>
