@@ -19,7 +19,7 @@ namespace WpfApp1.Windows.Forms
     /// </summary>
     public partial class UpdateFormBaie : Window
     {
-
+        public string Numero { get; set; }
         public int NbrEmplacement { get; set; }
         public bool Status { get; set; }
 

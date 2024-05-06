@@ -13,7 +13,7 @@ public partial class Baie
     /// <summary>
     /// status d'occupation de la baie
     /// </summary>
-    public bool Numero { get; set; }
+    public string Numero { get; set; }
 
     /// <summary>
     /// nombre d'emplacement que contient la baie

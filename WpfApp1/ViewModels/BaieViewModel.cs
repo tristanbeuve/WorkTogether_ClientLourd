@@ -168,12 +168,34 @@ namespace WpfApp1.ViewModels
                 {
                     int nbrEmplacement = SelectedBaie.NbrEmplacement;
                     UpdateFormBaie form = new UpdateFormBaie();
+                    form.Numero = SelectedBaie.Numero;
                     form.Status = SelectedBaie.Status;
                     form.NbrEmplacement = SelectedBaie.NbrEmplacement;
                     form.ShowDialog();
-                    if (form.DialogResult == true && nbrEmplacement>form.NbrEmplacement)
+                    if (form.DialogResult == true)
                     {
+                        if (nbrEmplacement>form.NbrEmplacement)
+                        {
+                            int soussUnite = nbrEmplacement - form.NbrEmplacement;
+                            for (int i = 0; i < soussUnite; i++)
+                            {
+                                WorkTogetherDBLib.Class.Unite unite = SelectedBaie.Unites.Last();
+                                if (unite.Status == false)
+                                {
+                                    context.Unites.Remove(unite);
+                                    context.SaveChanges();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Erreur : Vous ne pouvez pas supprimer une ou plusieurs unité(s) réservé(s)");
+                                }
+                            }
+                        }
                         Baie Baie = SelectedBaie;
+                        if (form.Numero.StartsWith("B"))
+                        {
+                            Baie.Numero = form.Numero;
+                        }
                         Baie.Status = form.Status;
                         Baie.NbrEmplacement = form.NbrEmplacement;
                         context.Baies.Update(Baie);
