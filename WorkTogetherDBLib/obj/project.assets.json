@@ -4016,19 +4016,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\trist\\.nuget\\packages\\": {}
+    "C:\\Users\\JuryEpreuve.WORKTOGETHER\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\trist\\Documents\\PPE\\Projet\\WorkTogether_ClientLourd\\WorkTogetherWPF\\WorkTogetherDBLib\\WorkTogetherDBLib.csproj",
+      "projectUniqueName": "C:\\Users\\JuryEpreuve.WORKTOGETHER\\source\\repos\\WorkTogether_ClientLourd\\WorkTogetherDBLib\\WorkTogetherDBLib.csproj",
       "projectName": "WorkTogetherDBLib",
-      "projectPath": "C:\\Users\\trist\\Documents\\PPE\\Projet\\WorkTogether_ClientLourd\\WorkTogetherWPF\\WorkTogetherDBLib\\WorkTogetherDBLib.csproj",
-      "packagesPath": "C:\\Users\\trist\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\trist\\Documents\\PPE\\Projet\\WorkTogether_ClientLourd\\WorkTogetherWPF\\WorkTogetherDBLib\\obj\\",
+      "projectPath": "C:\\Users\\JuryEpreuve.WORKTOGETHER\\source\\repos\\WorkTogether_ClientLourd\\WorkTogetherDBLib\\WorkTogetherDBLib.csproj",
+      "packagesPath": "C:\\Users\\JuryEpreuve.WORKTOGETHER\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\JuryEpreuve.WORKTOGETHER\\source\\repos\\WorkTogether_ClientLourd\\WorkTogetherDBLib\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\trist\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\JuryEpreuve.WORKTOGETHER\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4048,6 +4048,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -4085,7 +4090,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
