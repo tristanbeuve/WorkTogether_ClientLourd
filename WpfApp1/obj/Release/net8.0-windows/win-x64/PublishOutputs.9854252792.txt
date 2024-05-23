@@ -1,5 +1,0 @@
-C:\Users\JuryEpreuve.WORKTOGETHER\source\repos\WorkTogether_ClientLourd\WpfApp1\bin\Release\net8.0-windows\publish\win-x64\WpfApp1.pdb
-C:\Users\JuryEpreuve.WORKTOGETHER\source\repos\WorkTogether_ClientLourd\WpfApp1\bin\Release\net8.0-windows\publish\win-x64\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\JuryEpreuve.WORKTOGETHER\source\repos\WorkTogether_ClientLourd\WpfApp1\bin\Release\net8.0-windows\publish\win-x64\WorkTogetherDBLib.pdb
-C:\Users\JuryEpreuve.WORKTOGETHER\source\repos\WorkTogether_ClientLourd\WpfApp1\bin\Release\net8.0-windows\publish\win-x64\Modules.pdb
-C:\Users\JuryEpreuve.WORKTOGETHER\source\repos\WorkTogether_ClientLourd\WpfApp1\bin\Release\net8.0-windows\publish\win-x64\WpfApp1.exe

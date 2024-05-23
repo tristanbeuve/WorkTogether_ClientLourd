@@ -47,8 +47,9 @@ namespace WpfApp1.Windows
 
 
             bool isValidUser = AuthenticateUser(useremail, password);
+            bool isValideRole = ValidationRole(useremail);
 
-            if (isValidUser)
+            if (isValidUser && isValideRole)
             {
                 this.DialogResult = true;
                 this.Close();
@@ -78,6 +79,22 @@ namespace WpfApp1.Windows
                 ((App)Application.Current).User = user;
 
                 return isPasswordCorrect;
+            }
+        }
+
+        private bool ValidationRole(string useremail)
+        {
+
+            using (PpeContext context = new PpeContext())
+            {
+                User? user = context.Users.FirstOrDefault(u => u.Email == useremail);
+                bool isValidateRole = false;
+
+                if (user != null && (user.Roles.Contains("ROLE_ADMIN") || user.Roles.Contains("ROLE_COMPTA")))
+                {
+                    isValidateRole = true;
+                }
+                return isValidateRole;
             }
         }
     }

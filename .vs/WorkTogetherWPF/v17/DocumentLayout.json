@@ -3,8 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\JuryEpreuve.WORKTOGETHER\\source\\repos\\WorkTogether_ClientLourd\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2717FAA2-AC78-459D-9B04-B52A286B684E}|WorkTogetherDBLib\\WorkTogetherDBLib.csproj|c:\\users\\juryepreuve.worktogether\\source\\repos\\worktogether_clientlourd\\worktogetherdblib\\models\\baie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2717FAA2-AC78-459D-9B04-B52A286B684E}|WorkTogetherDBLib\\WorkTogetherDBLib.csproj|solutionrelative:worktogetherdblib\\models\\baie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FD8393DB-8F25-4E9F-A619-25F2FA6B5C50}|WpfApp1\\WpfApp1.csproj|c:\\users\\juryepreuve.worktogether\\source\\repos\\worktogether_clientlourd\\wpfapp1\\viewmodels\\userviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD8393DB-8F25-4E9F-A619-25F2FA6B5C50}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\viewmodels\\userviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD8393DB-8F25-4E9F-A619-25F2FA6B5C50}|WpfApp1\\WpfApp1.csproj|c:\\users\\juryepreuve.worktogether\\source\\repos\\worktogether_clientlourd\\wpfapp1\\windows\\windowlogin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD8393DB-8F25-4E9F-A619-25F2FA6B5C50}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\windows\\windowlogin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +26,39 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Baie.cs",
-              "DocumentMoniker": "C:\\Users\\JuryEpreuve.WORKTOGETHER\\source\\repos\\WorkTogether_ClientLourd\\WorkTogetherDBLib\\Models\\Baie.cs",
-              "RelativeDocumentMoniker": "WorkTogetherDBLib\\Models\\Baie.cs",
-              "ToolTip": "C:\\Users\\JuryEpreuve.WORKTOGETHER\\source\\repos\\WorkTogether_ClientLourd\\WorkTogetherDBLib\\Models\\Baie.cs",
-              "RelativeToolTip": "WorkTogetherDBLib\\Models\\Baie.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "UserViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\JuryEpreuve.WORKTOGETHER\\source\\repos\\WorkTogether_ClientLourd\\WpfApp1\\ViewModels\\UserViewModel.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\ViewModels\\UserViewModel.cs",
+              "ToolTip": "C:\\Users\\JuryEpreuve.WORKTOGETHER\\source\\repos\\WorkTogether_ClientLourd\\WpfApp1\\ViewModels\\UserViewModel.cs",
+              "RelativeToolTip": "WpfApp1\\ViewModels\\UserViewModel.cs",
+              "ViewState": "AQIAAHYAAAAAAAAAAAAowIEAAABEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-06T13:04:10.506Z",
+              "WhenOpened": "2024-05-23T07:50:38.886Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Microsoft.Common.CurrentVersion.targets",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ViewState": "AQIAAJcVAAAAAAAAAAAQwJsVAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2024-05-21T08:31:15.762Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WindowLogin.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\JuryEpreuve.WORKTOGETHER\\source\\repos\\WorkTogether_ClientLourd\\WpfApp1\\Windows\\WindowLogin.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\Windows\\WindowLogin.xaml.cs",
+              "ToolTip": "C:\\Users\\JuryEpreuve.WORKTOGETHER\\source\\repos\\WorkTogether_ClientLourd\\WpfApp1\\Windows\\WindowLogin.xaml.cs",
+              "RelativeToolTip": "WpfApp1\\Windows\\WindowLogin.xaml.cs",
+              "ViewState": "AQIAACwAAAAAAAAAAAD4vzMAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T22:11:32.382Z",
               "EditorCaption": ""
             }
           ]

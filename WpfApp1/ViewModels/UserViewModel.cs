@@ -127,7 +127,7 @@ namespace WpfApp1.ViewModels
                 {
                     //User user = context.Users.Include(u => u.Reservations).SingleOrDefault(u => u.Id == SelectedUser.Id);
                     User? User = SelectedUser;
-                    if (User.Reservations.Any())
+                    if (User.Reservations.Any() && User.Roles.Equals("[\"ROLE_ADMIN\"]"))
                     {
                         MessageBox.Show("Erreur ! Il semblerait que cet utilisateur possède des réservations");
                         
