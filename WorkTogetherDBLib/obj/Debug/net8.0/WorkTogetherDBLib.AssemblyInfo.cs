@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WorkTogetherDBLib")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8688a4dd68123d9d5b082123c9e8a0a0e0d90658")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+be62674910f525729b9321324718856db131204a")]
 [assembly: System.Reflection.AssemblyProductAttribute("WorkTogetherDBLib")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WorkTogetherDBLib")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
