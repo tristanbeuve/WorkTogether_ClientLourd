@@ -95,6 +95,7 @@ namespace WpfApp1.ViewModels
                 Baie baie = new Baie();
                 baie.NbrEmplacement = 42;
                 baie.Status = false;
+                baie.Numero="B"+baie.Id.ToString("D3");
                 context.Baies.Add(baie);
                 this._Baie.Add(baie);
                 context.SaveChanges();
